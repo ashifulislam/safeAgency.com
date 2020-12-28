@@ -1,0 +1,42 @@
+table{
+    height: 400px;
+    
+    
+}
+
+table,td,th{
+ border:1px solid black;
+  margin: auto;
+    width: 700px;
+    background: white;
+    color:black;
+font: 120px;
+  
+    border-collapse: collapse;
+  
+}
+th,td{
+    padding: 25px;
+    font-size: 15px;
+}
+.addNew{
+   margin: auto;
+    color:red;
+}
+input[type=submit]{
+    border:none;
+    width:190px;
+    background:white;
+    color:#000;
+    font-size:16px;
+    line-height:25px;
+    padding:5px 0;
+    border-radius:15px;
+    cursor:pointer;
+    margin-top: 15px;
+    float: right;
+}
+input[type=submit]:hover{
+    color:#fff;
+    background-color:black;
+}
