@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="" />
+    <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/liveChat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/liveChat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-12-28.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,16 +156,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\app\Http\Controllers\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\app\Listeners" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
     </key>
   </component>
   <component name="RunManager">
@@ -264,7 +274,9 @@
       <workItem from="1609047741458" duration="1072000" />
       <workItem from="1609065719152" duration="11630000" />
       <workItem from="1609132125073" duration="2794000" />
-      <workItem from="1609142790862" duration="5829000" />
+      <workItem from="1609142790862" duration="21387000" />
+      <workItem from="1609230412131" duration="8172000" />
+      <workItem from="1609239740658" duration="14121000" />
     </task>
     <servers />
   </component>
@@ -297,6 +309,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1608271107823" />
+    <state x="441" y="87" key="NewPhpClassDialog" timestamp="1609162904583">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="441" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1609162904583" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1609075619947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

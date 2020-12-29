@@ -41,22 +41,26 @@
 
                 </div>
                 <div >
-                    @if(!empty($packageTypeId))
-                    @foreach($packageTypeId as $singlePackageTypeId)
-                        <form action="{{route('sendHireRequest',[$agent_id,$singlePackageTypeId])}}" method="post">
+                        <form style="float:left" action="{{route('sendHireRequest',[$agent_id,$packageTypeId->package_type_id])}}" method="post">
                             @csrf
-                            <label style="float:left" class="btn btn-success">Demand  : {{$demands}}Tk</label>
+                            <label style="float:left"  class="btn btn-success">DEMAND  : {{$demands}}Tk</label>
                               &nbsp;
                               &nbsp;
                             <input type="hidden" name="status" value="pending">
 
-                            <button type="submit" class="btn btn-primary">Hire Now</button>
+                            <button  type="submit" class="btn btn-primary">HIRE NOW</button>
 
                         </form>
-                    @endforeach
-                        @endif
+                      &nbsp;
+                            &nbsp;
+
+                            <a href="{{route('payment',[$demands,$packageTypeId->package_type])}}"><button type="submit" class="btn btn-success">PAYMENT</button></a>
+
+
+
 
                 </div>
+
                 &nbsp;
                 &nbsp;
 

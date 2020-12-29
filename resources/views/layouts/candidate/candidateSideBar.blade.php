@@ -38,6 +38,7 @@
                             <li><a title="Dashboard v.2" href="{{route('application.confirm')}}"><span class="mini-sub-pro">Applied Job</span></a></li>
 {{--                            <li><a title="Dashboard v.2" href="{{route('application.confirmUpdate')}}"><span class="mini-sub-pro">Applied Job Updated</span></a></li>--}}
                             <li><a title="Dashboard v.2" href="{{route('agentRequestsStatus')}}"><span class="mini-sub-pro">AgentRequests</span></a></li>
+                            <li><a title="Dashboard v.2" href="{{route('chatView')}}"><span class="mini-sub-pro">Chat</span></a></li>
                             <li><a title="Dashboard v.3" href=""> <span class="mini-sub-pro">Approved Job</span></a></li>
                             <li><a title="Product List" href="product-list.html"><span class="mini-sub-pro"></span></a></li>
 

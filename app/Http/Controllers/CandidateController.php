@@ -78,7 +78,8 @@ class CandidateController extends Controller
      }
 
     public function showPackageList($agent_id){
-//
+
+        //Getting services based on package
         $services=DB::table('service_types')
             ->select('service_types.service_title','service_types.service_type','manage_services.service_description','manage_services.demand','manage_services.agent_reg_id','package_lists.package_type')
             ->join('manage_services','service_types.id','=','manage_services.service_type_id')
@@ -90,8 +91,9 @@ class CandidateController extends Controller
 
             ->get();
 
-        $packageTypeId=DB::table('package_lists')
-            ->select('manage_services.package_type_id')
+        //getting the package_type_id
+     $packageTypeId=DB::table('package_lists')
+            ->select('manage_services.package_type_id','package_lists.package_type')
             ->join('manage_services','package_lists.id','=','manage_services.package_type_id')
             ->where('manage_services.agent_reg_id',$agent_id)
             ->where('package_lists.package_type','=','complete package')

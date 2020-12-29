@@ -11,6 +11,7 @@
 |
 */
 use App\Http\Controllers\NOAPI\CustomerController;
+use App\Http\Controllers\SslCommerzPaymentController;
 use RealRashid\SweetAlert\Facades\Alert;
 //
 //Route::get('/', function () {
@@ -167,3 +168,17 @@ Route::get('approvedCandidates','LocalAgentController@approvedCandidates')->name
 
 
 Route::resource('packageType','localAgent\PackageTypeController');
+
+
+
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2/{demands}/{package_type}', [SslCommerzPaymentController::class, 'exampleHostedCheckout'])->name('payment');
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax'])->name('payViaAjax');
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);

@@ -4,9 +4,66 @@
         <meta charset="utf-8">
         <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
         <!--  All snippets are MIT license http://bootdey.com/license -->
-        <title>Chat box - Bootdey.com</title>
+        <title>Chat box</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- Google Fonts
+            ============================================ -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+        <!-- Bootstrap CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Bootstrap CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- nalika Icon CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/nalika-icon.css">
+        <!-- owl.carousel CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
+        <!-- animate CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- normalize CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- meanmenu icon CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+        <!-- main CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- morrisjs CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/morrisjs/morris.css">
+        <!-- mCustomScrollbar CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+        <!-- metisMenu CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+        <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+        <!-- calendar CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+        <!-- style CSS
+            ============================================ -->
+        <link rel="stylesheet" href="style.css">
+        <!-- responsive CSS
+            ============================================ -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- modernizr JS
+            ============================================ -->
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" href="{{asset('user')}}/css/style.css">
+        <link rel="stylesheet" href="{{asset('employer')}}/css/employer.css">
         <style type="text/css">
 
 
@@ -186,6 +243,9 @@
         </style>
     </head>
     <body>
+    @include('layouts/candidate/candidateSideBar');
+    @include('layouts/candidate/candidateNavBar');
+
 
     <div id="pcoded" class="container bootstrap snippets bootdey">
         <div class="row">
@@ -243,7 +303,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
+
 {{--                                <div class="row">--}}
 {{--                                    <div class="col-lg-12">--}}
 {{--                                        <div class="media">--}}
@@ -254,7 +314,7 @@
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-                                <hr>
+
 {{--                                <div class="row">--}}
 {{--                                    <div class="col-lg-12">--}}
 {{--                                        <div class="media">--}}
@@ -270,7 +330,6 @@
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-                                <hr>
                             </div>
                         </div>
                         <div class="portlet-footer">
