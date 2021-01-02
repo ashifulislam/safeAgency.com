@@ -27,20 +27,27 @@ class LocalAgentController extends Controller
     {
         $this->middleware('auth:localAgent');
     }
-    public function approvedCandidates(){
+    public function approvedCandidates()
+    {
+
         $current_agent_id=Auth::user()->id;
         $approvedCandidates=DB::table('candidate_requests')
-            ->select('candidates.id','candidates.email','candidate_requests.agent_reg_id','candidates.firstName',
-            'candidates.title','candidates.skill_name',
-                'candidate_requests.candidate_id','candidate_requests.status','package_lists.package_type')
+            ->select(
+                'candidates.id','candidates.email','candidate_requests.agent_reg_id','candidates.firstName',
+                'candidates.title','candidates.skill_name', 'candidate_requests.candidate_id','candidate_requests.status',
+                'package_lists.package_type','orders.payment_status','orders.phone')
+
             ->join('candidates','candidates.id','=','candidate_requests.candidate_id')
             ->join('package_lists','package_lists.id','=','candidate_requests.package_type_id')
+            ->join('orders','candidates.id','=','orders.candidate_id','left outer')
             ->where('candidate_requests.agent_reg_id',$current_agent_id)
+            ->where('orders.agent_reg_id',$current_agent_id)
             ->where('candidate_requests.status','=','approved')
-
+            ->orderBy('candidates.id','ASC')
             ->get();
 
-
+        //get candidate id from above
+        //and match to the order table then we can get the payment status of the specific candidate
         return view('local_agent.approvedCandidates',['approvedCandidates'=>$approvedCandidates]);
     }
 
@@ -59,6 +66,10 @@ class LocalAgentController extends Controller
               CandidateRequests::where('candidate_id',$current_candidate_id)->
               where('agent_reg_id',$current_agent_id)
                   ->update(array('status'=>$request->get('status')));
+
+
+
+
           }
 
 

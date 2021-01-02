@@ -33,8 +33,10 @@
                                                         <thead>
                                                         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 201px;">Name</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 299px;">Email</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 147px;">Designation</th>
                                                             <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 74px;">Skill</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 74px;">Phone</th>
                                                             <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 74px;">Package</th>
                                                             <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 149px;">Status</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 149px;">Payment Status</th>
                                                         </thead>
                                                         <tbody>
                                                         @foreach($approvedCandidates as $singleCandidate)
@@ -44,14 +46,18 @@
                                                             <td>{{$singleCandidate->email}}</td>
                                                             <td>{{$singleCandidate->title}}</td>
                                                             <td>{{$singleCandidate->skill_name}}</td>
+                                                            <td>{{$singleCandidate->phone}}</td>
                                                             <td>{{$singleCandidate->package_type}}</td>
                                                             <td>
                                                                 {{$singleCandidate->status}}
 
+                                                            </td> <td>
+                                                                {{$singleCandidate->payment_status}}
+
                                                             </td>
 
                                                         </tr>
-                                                        @endforeach
+                                                            @endforeach
                                                         </tbody>
 
                                                     </table></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-5"><div class="dataTables_info" id="simpletable_info" role="status" aria-live="polite">Showing 1 to 10 of 20 entries</div></div><div class="col-xs-12 col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="simpletable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="simpletable_previous"><a href="#" aria-controls="simpletable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="simpletable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="simpletable_next"><a href="#" aria-controls="simpletable" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>

@@ -75,9 +75,10 @@
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Billing address</h4>
-            <form action="{{ url('/pay') }}" method="POST" class="needs-validation">
+            <form action="{{ route('pay') }}" method="POST" class="needs-validation">
                 <input type="hidden" value="{{ csrf_token() }}" name="_token" />
                 <input type="hidden" value="{{$demands}}" name="demands" />
+                <input type="hidden" value="{{$agent_id}}" name="agent_id" />
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="firstName">Full name</label>

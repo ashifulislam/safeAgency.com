@@ -18,9 +18,9 @@ class LocalAgent extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password','phone'
     ];
-    public function visaApplies(){
-        $this->hasMany(VisaApply::class,'agent_id');
-    }
+//    public function visaApplies(){
+//        $this->hasMany(VisaApply::class,'agent_id');
+//    }
 
     /**
      * The attributes that should be hidden for arrays.

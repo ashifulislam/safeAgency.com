@@ -20,12 +20,20 @@ class CreateOrdersTable extends Migration
             $table->string('phone');
             $table->double('amount');
             $table->string('address');
-            $table->string('status');
+            $table->string('payment_status');
             $table->string('transaction_id');
             $table->string('currency');
             $table->string('country');
             $table->string('zip');
             $table->string('state');
+
+            $table->unsignedBigInteger('candidate_id');
+
+            $table->foreign('candidate_id')->references('id')->on('candidates')->onDelete('CASCADE');
+            $table->unsignedBigInteger('agent_reg_id');
+            $table->foreign('agent_reg_id')->references('id')->on('local_agents')->onDelete('CASCADE');
+
+
 
             $table->timestamps();
         });

@@ -7,11 +7,14 @@ use App\Candidate;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
 use Auth;
+use Illuminate\Support\Facades\Redirect;
+use RealRashid\SweetAlert\Facades\Alert;
 use Symfony\Component\Console\Input\Input;
 
 class SslCommerzPaymentController extends Controller
 {
     public function __construct(){
+
         $this->middleware('auth:candidate');
     }
 
@@ -19,25 +22,58 @@ class SslCommerzPaymentController extends Controller
     {
         $current_candidate=Auth::user()->id;
      //   Table::select('name','surname')->where('id', 1)->get();
-      $candidates=Candidate::select('firstName','email')->where('id',$current_candidate)->first();
-
-
+        $candidates=Candidate::select('firstName','email')->where('id',$current_candidate)->first();
 
         return view('candidate.exampleEasycheckout')->with(['candidates'=>$candidates]);
     }
 
-    public function exampleHostedCheckout($demands,$package_type)
+    public function exampleHostedCheckout($demands,$package_type,$agent_id,$package_type_id)
     {
         $current_candidate=Auth::user()->id;
-        //   Table::select('name','surname')->where('id', 1)->get();
-        $candidates=Candidate::select('firstName','email')->where('id',$current_candidate)->first();
 
-        return view('candidate.exampleHosted')->with(['candidates'=>$candidates])->with('demands',$demands)
-            ->with('package_type',$package_type);
+        $candidates=Candidate::select('firstName','email')->where('id',$current_candidate)->first();
+        $existed_candidate=DB::table('orders')
+            ->where('candidate_id',$current_candidate)
+            ->first();
+
+        if(DB::table('candidate_requests')
+
+                ->select('status')
+                ->where('candidate_id',$current_candidate)
+                ->where('agent_reg_id',$agent_id)
+                ->where('package_type_id',$package_type_id)
+                ->where('status','=','approved')
+                ->count()>0 && $existed_candidate === null)
+        {
+
+            return view('candidate.exampleHosted')
+                ->with(['candidates'=>$candidates])
+                ->with('demands',$demands)
+                ->with('package_type',$package_type)
+                ->with('agent_id',$agent_id);
+
+        }
+
+        else {
+
+            if($package_type=='complete package'){
+                return redirect()->route('showPackageList',[$agent_id])
+                    ->with('not_approved','Request is not approved by the agent or already paid');
+            }
+            else{
+                return redirect()->route('showPartialPackage',[$agent_id])
+                    ->with('not_approved','Request is not approved by the agent or already paid');
+            }
+
+
+            }
+
+
     }
 
     public function index(Request $request)
     {
+        $current_candidate_id=Auth::user()->id;
         # Here you have to receive all the order data to initate the payment.
         # Let's say, your oder transaction informations are saving in a table called "orders"
         # In "orders" table, order unique identity is "transaction_id". "status" field contain status of the transaction, "amount" is the order amount to be paid and "currency" is for storing Site Currency which will be checked with paid currency.
@@ -59,6 +95,8 @@ class SslCommerzPaymentController extends Controller
         $post_data['cus_postcode'] = $request->input('zip');
         $post_data['cus_country'] = $request->input('country');
         $post_data['cus_phone'] = $request->input('customer_mobile');
+        $post_data['cus_candidate_id'] =$current_candidate_id ;
+        $post_data['cus_agent_reg_id'] = $request->input('agent_id');
         $post_data['cus_fax'] = "";
 
         # SHIPMENT INFORMATION
@@ -91,13 +129,15 @@ class SslCommerzPaymentController extends Controller
                 'phone' => $post_data['cus_phone'],
                 'amount' => $post_data['total_amount'],
                 'address' => $post_data['cus_add1'],
-                'status' => 'Pending',
+                'payment_status' => 'Pending',
 
                 'transaction_id' => $post_data['tran_id'],
                 'currency' => $post_data['currency'],
                 'country' => $post_data['cus_country'],
                 'state' => $post_data['cus_state'],
                 'zip' => $post_data['cus_postcode'],
+                'candidate_id' => $post_data['cus_candidate_id'],
+                'agent_reg_id'=> $post_data['cus_agent_reg_id']
             ]);
 
         $sslc = new SslCommerzNotification();
@@ -202,9 +242,9 @@ class SslCommerzPaymentController extends Controller
         #Check order status in order tabel against the transaction id or order id.
         $order_detials = DB::table('orders')
             ->where('transaction_id', $tran_id)
-            ->select('transaction_id', 'status', 'currency', 'amount')->first();
+            ->select('transaction_id', 'payment_status', 'currency', 'amount')->first();
 
-        if ($order_detials->status == 'Pending') {
+        if ($order_detials->payment_status == 'Pending') {
             $validation = $sslc->orderValidate($tran_id, $amount, $currency, $request->all());
 
             if ($validation == TRUE) {
@@ -215,7 +255,7 @@ class SslCommerzPaymentController extends Controller
                 */
                 $update_product = DB::table('orders')
                     ->where('transaction_id', $tran_id)
-                    ->update(['status' => 'Processing']);
+                    ->update(['payment_status' => 'Successful']);
 
                 echo "<br >Transaction is successfully Completed";
             } else {
@@ -225,7 +265,7 @@ class SslCommerzPaymentController extends Controller
                 */
                 $update_product = DB::table('orders')
                     ->where('transaction_id', $tran_id)
-                    ->update(['status' => 'Failed']);
+                    ->update(['payment_status' => 'Failed']);
                 echo "validation Fail";
             }
         } else if ($order_detials->status == 'Processing' || $order_detials->status == 'Complete') {

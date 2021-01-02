@@ -41,7 +41,9 @@
 
                 </div>
                 <div >
-                        <form style="float:left" action="{{route('sendHireRequest',[$agent_id,$packageTypeId->package_type_id])}}" method="post">
+                    @if(!empty($packageTypeId))
+
+                    <form style="float:left" action="{{route('sendHireRequest',[$agent_id,$packageTypeId->package_type_id])}}" method="post">
                             @csrf
                             <label style="float:left"  class="btn btn-success">DEMAND  : {{$demands}}Tk</label>
                               &nbsp;
@@ -54,9 +56,9 @@
                       &nbsp;
                             &nbsp;
 
-                            <a href="{{route('payment',[$demands,$packageTypeId->package_type])}}"><button type="submit" class="btn btn-success">PAYMENT</button></a>
+                            <a href="{{route('payment',[$demands,$packageTypeId->package_type,$agent_id,$packageTypeId->package_type_id])}}"><button type="submit" class="btn btn-success">PAYMENT</button></a>
 
-
+                      @endif
 
 
                 </div>

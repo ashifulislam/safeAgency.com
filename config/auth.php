@@ -145,6 +145,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'candidates' => [
+            'provider' => 'candidates',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
         'localAgents' => [
             'provider' => 'localAgents',
             'table' => 'password_resets',

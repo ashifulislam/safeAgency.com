@@ -3,14 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/liveChat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/liveChat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/LocalAgent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LocalAgent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_132516_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_132516_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/exampleHosted.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/exampleHosted.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/approvedCandidates.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/approvedCandidates.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-12-28.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +29,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/ashifulislam/safeAgency.com" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -276,7 +289,12 @@
       <workItem from="1609132125073" duration="2794000" />
       <workItem from="1609142790862" duration="21387000" />
       <workItem from="1609230412131" duration="8172000" />
-      <workItem from="1609239740658" duration="14121000" />
+      <workItem from="1609239740658" duration="14888000" />
+      <workItem from="1609316243000" duration="19171000" />
+      <workItem from="1609403690870" duration="19561000" />
+      <workItem from="1609477976832" duration="2666000" />
+      <workItem from="1609506817399" duration="8347000" />
+      <workItem from="1609575379310" duration="17755000" />
     </task>
     <servers />
   </component>
