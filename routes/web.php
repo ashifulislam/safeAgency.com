@@ -163,6 +163,7 @@ Route::post('sendHireRequest/{agent_id}/{package_type_id}','candidate\CandidateR
 Route::post('approveCandidates/{candidate_id}','LocalAgentController@approveCandidates')->name('approveCandidates');
 Route::post('rejectCandidates/{candidate_id}','LocalAgentController@rejectCandidates')->name('rejectCandidates');
 Route::get('approvedCandidates','LocalAgentController@approvedCandidates')->name('approvedCandidates');
+Route::get('requiredTasks','LocalAgentController@requiredTasks')->name('requiredTasks');
 
 //Route::get('chatWithCandidate','localAgent\ChatController@chatWithCandidate')->name('chatWithCandidate');
 

@@ -2966,7 +2966,7 @@ __webpack_require__.r(__webpack_exports__);
 
         toast.fire({
           icon: 'success',
-          title: 'Signed in successfully'
+          title: 'Profile created successfully'
         });
       })["catch"](function () {});
     },
@@ -52640,7 +52640,7 @@ var render = function() {
                                 _c("h2", [_vm._v(_vm._s(user.name))]),
                                 _vm._v(" "),
                                 _c("span", { staticClass: "text-white" }, [
-                                  _vm._v("Web designer")
+                                  _vm._v(_vm._s(user.skill))
                                 ])
                               ])
                             }),
@@ -53296,11 +53296,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "d-inline" }, [
               _c("h4", [_vm._v("Agent Profile")]),
               _vm._v(" "),
-              _c("span", [
-                _vm._v(
-                  "lorem ipsum dolor sit amet, consectetur adipisicing elit"
-                )
-              ])
+              _c("span", [_vm._v("Here is your profile")])
             ])
           ])
         ]),
@@ -56857,7 +56853,7 @@ var render = function() {
                     staticClass: "modal-title",
                     attrs: { id: "addNewLabel" }
                   },
-                  [_vm._v("Add New User")]
+                  [_vm._v("Create your profile")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -56874,7 +56870,7 @@ var render = function() {
                     staticClass: "modal-title",
                     attrs: { id: "addNewLabel" }
                   },
-                  [_vm._v("Update The User")]
+                  [_vm._v("Update your profile")]
                 ),
                 _vm._v(" "),
                 _vm._m(9)
@@ -57122,7 +57118,7 @@ var render = function() {
                         staticClass: "btn btn-primary",
                         attrs: { type: "submit" }
                       },
-                      [_vm._v("Add New")]
+                      [_vm._v("Create profile")]
                     ),
                     _vm._v(" "),
                     _c(
@@ -57139,7 +57135,7 @@ var render = function() {
                         staticClass: "btn btn-success",
                         attrs: { type: "submit" }
                       },
-                      [_vm._v("Update")]
+                      [_vm._v("Update profile")]
                     )
                   ])
                 ]

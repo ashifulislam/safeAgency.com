@@ -46,7 +46,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">New Category</h4>
+                    <h4 class="modal-title" id="myModalLabel">Post service</h4>
                 </div>
                 <form name="serviceType" action="{{route('postService.store')}}" method="post">
                     @csrf

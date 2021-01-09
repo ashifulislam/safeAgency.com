@@ -317,7 +317,7 @@
                             <li class="pcoded-hasmenu">
                                 <a href="javascript:void(0)">
                                     <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
-                                    <span class="pcoded-mtext">ManageUser</span>
+                                    <span class="pcoded-mtext">ManageProfile</span>
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class=" pcoded-hasmenu">
@@ -457,6 +457,12 @@
                                 <a href="{{route('approvedCandidates')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                                     <span class="pcoded-mtext">ApprovedCandidates</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="{{route('requiredTasks')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Tasks</span>
                                 </a>
                             </li>
                         </ul>

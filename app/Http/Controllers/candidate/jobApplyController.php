@@ -13,7 +13,8 @@ class jobApplyController extends Controller
     {
         $this->middleware('auth:candidate');
     }
-    public function jobApplied(Request $request){
+    public function jobApplied(Request $request)
+    {
 
 
         $this->validate($request,[
@@ -28,7 +29,7 @@ class jobApplyController extends Controller
         where('jobPostId','=',$current_job_post_id)
             ->where('candidateId','=',$current_candidate_id)
             ->count()>0){
-            return redirect()->back()->with('error_message','Already applied');;
+            return redirect()->back()->with('error_message','Already applied');
         }
 
         else{

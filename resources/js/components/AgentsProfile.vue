@@ -11,7 +11,7 @@
                                 <div class="page-header-title">
                                     <div class="d-inline">
                                         <h4>Agent Profile</h4>
-                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                        <span>Here is your profile</span>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                                     <div class="col-lg-12">
                                                         <div v-for="user in users" class="user-title">
                                                             <h2>{{user.name}}</h2>
-                                                            <span class="text-white">Web designer</span>
+                                                            <span class="text-white">{{user.skill}}</span>
                                                         </div>
                                                     </div>
                                                     <div>
@@ -1073,7 +1073,7 @@ export default {
                 //sweet alert handling
                 toast.fire({
                     icon: 'success',
-                    title: 'Signed in successfully'
+                    title: 'Profile created successfully'
                 })
             }).catch(()=>{
 

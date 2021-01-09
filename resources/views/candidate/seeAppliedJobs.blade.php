@@ -95,7 +95,7 @@
 												<i class="icon nalika-home"></i>
 											</div>
 											<div class="breadcomb-ctn">
-												<h2>See Requests</h2>
+												<h2>Applied job</h2>
 												<p> <span class="bread-ntd"></span></p>
 											</div>
 										</div>

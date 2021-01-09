@@ -815,8 +815,8 @@
             <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 v-show="!editMode" class="modal-title" id="addNewLabel">Add New User</h5>
-                        <h5 v-show="editMode" class="modal-title" id="addNewLabel">Update The User</h5>
+                        <h5 v-show="!editMode" class="modal-title" id="addNewLabel">Create your profile</h5>
+                        <h5 v-show="editMode" class="modal-title" id="addNewLabel">Update your profile</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -871,8 +871,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button v-show="!editMode" type="submit"  class="btn btn-primary">Add New</button>
-                            <button v-show="editMode" type="submit" class="btn btn-success">Update</button>
+                            <button v-show="!editMode" type="submit"  class="btn btn-primary">Create profile</button>
+                            <button v-show="editMode" type="submit" class="btn btn-success">Update profile</button>
 
                         </div>
                     </form>

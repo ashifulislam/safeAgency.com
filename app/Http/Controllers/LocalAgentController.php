@@ -31,7 +31,7 @@ class LocalAgentController extends Controller
     {
 
         $current_agent_id=Auth::user()->id;
-        $approvedCandidates=DB::table('candidate_requests')
+       $approvedCandidates=DB::table('candidate_requests')
             ->select(
                 'candidates.id','candidates.email','candidate_requests.agent_reg_id','candidates.firstName',
                 'candidates.title','candidates.skill_name', 'candidate_requests.candidate_id','candidate_requests.status',
@@ -207,5 +207,32 @@ class LocalAgentController extends Controller
         $data['agents']=AgentsProfile::select('photo')->where('agent_reg_id',$current_agent_id)->get();
 
         return view('home',$data);
+    }
+    public function requiredTasks(){
+
+
+        $current_agent_id=Auth::user()->id;
+        $required_task=DB::table('candidate_requests')
+            ->select(
+                'candidates.id','candidates.email','candidate_requests.agent_reg_id','candidate_requests.candidate_id','candidate_requests.status',
+                'package_lists.package_type','orders.payment_status','orders.phone','manage_services.service_type_id')
+
+            ->join('candidates','candidates.id','=','candidate_requests.candidate_id')
+            ->join('package_lists','package_lists.id','=','candidate_requests.package_type_id')
+
+            ->join('manage_services','package_lists.id','=','manage_services.package_type_id')
+            ->join('orders','candidates.id','=','orders.candidate_id','left outer')
+            ->where('candidate_requests.agent_reg_id',$current_agent_id)
+            ->where('orders.agent_reg_id',$current_agent_id)
+            ->where('orders.payment_status','=','successful')
+            ->where('candidate_requests.status','=','approved')
+            ->orderBy('candidates.id','ASC')
+            ->get();
+        dd($required_task);
+
+
+
+
+       // return view('local_agent.requiredTasks',$data);
     }
 }
