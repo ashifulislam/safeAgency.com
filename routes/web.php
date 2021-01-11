@@ -166,7 +166,7 @@ Route::get('approvedCandidates','LocalAgentController@approvedCandidates')->name
 Route::get('requiredTasks','LocalAgentController@requiredTasks')->name('requiredTasks');
 
 //Route::get('chatWithCandidate','localAgent\ChatController@chatWithCandidate')->name('chatWithCandidate');
-
+Route::get('visa_application/{candidate_name}','localAgentController@visa_application')->name('visa_application');
 
 Route::resource('packageType','localAgent\PackageTypeController');
 

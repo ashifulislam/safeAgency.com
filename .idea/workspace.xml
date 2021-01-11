@@ -4,14 +4,11 @@
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/jobApplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/jobApplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/CreateAgentProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CreateAgentProfile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/seeAppliedJobs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/seeAppliedJobs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/servicePost.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/servicePost.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-20.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,6 +292,10 @@
       <workItem from="1609737300633" duration="2624000" />
       <workItem from="1609764905845" duration="6024000" />
       <workItem from="1610101867917" duration="7373000" />
+      <workItem from="1610201402419" duration="5467000" />
+      <workItem from="1610270124483" duration="7232000" />
+      <workItem from="1610353843516" duration="13402000" />
+      <workItem from="1610376587787" duration="2611000" />
     </task>
     <servers />
   </component>

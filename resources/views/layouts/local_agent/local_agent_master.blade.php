@@ -379,47 +379,44 @@
                             </li>
 
                             <li class="pcoded-hasmenu">
-                                <a href="javascript:void(0)">
-                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">Manage Visa</span>
-                                </a>
+
                                 <ul class="pcoded-submenu">
-                                    <li class=" ">
-                                        <a href="widget-statistic.htm">
-                                            <span class="pcoded-mtext">Work Permit</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="widget-data.htm">
-                                            <span class="pcoded-mtext">Visa Process</span>
-                                        </a>
-                                    </li>
+{{--                                    <li class=" ">--}}
+{{--                                        <a href="widget-statistic.htm">--}}
+{{--                                            <span class="pcoded-mtext">Work Permit</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class=" ">--}}
+{{--                                        <a href="widget-data.htm">--}}
+{{--                                            <span class="pcoded-mtext">Visa Process</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
 
 
                                 </ul>
                             </li>
 
                             <li class="pcoded-hasmenu">
-                                <a href="javascript:void(0)">
-                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">Manage Flight</span>
-                                </a>
+{{--                                <a href="javascript:void(0)">--}}
+{{--                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>--}}
+{{--                                    <span class="pcoded-mtext">Manage Flight</span>--}}
+{{--                                </a>--}}
                                 <ul class="pcoded-submenu">
-                                    <li class=" ">
-                                        <a href="widget-statistic.htm">
-                                            <span class="pcoded-mtext">Statistic</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="widget-data.htm">
-                                            <span class="pcoded-mtext">Data</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="widget-chart.htm">
-                                            <span class="pcoded-mtext">Chart Widget</span>
-                                        </a>
-                                    </li>
+{{--                                    <li class=" ">--}}
+{{--                                        <a href="widget-statistic.htm">--}}
+{{--                                            <span class="pcoded-mtext">Statistic</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class=" ">--}}
+{{--                                        <a href="widget-data.htm">--}}
+{{--                                            <span class="pcoded-mtext">Data</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class=" ">--}}
+{{--                                        <a href="widget-chart.htm">--}}
+{{--                                            <span class="pcoded-mtext">Chart Widget</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
 
                                 </ul>
                             </li>

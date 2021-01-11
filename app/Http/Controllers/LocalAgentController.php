@@ -31,7 +31,7 @@ class LocalAgentController extends Controller
     {
 
         $current_agent_id=Auth::user()->id;
-       $approvedCandidates=DB::table('candidate_requests')
+        $approvedCandidates=DB::table('candidate_requests')
             ->select(
                 'candidates.id','candidates.email','candidate_requests.agent_reg_id','candidates.firstName',
                 'candidates.title','candidates.skill_name', 'candidate_requests.candidate_id','candidate_requests.status',
@@ -39,12 +39,13 @@ class LocalAgentController extends Controller
 
             ->join('candidates','candidates.id','=','candidate_requests.candidate_id')
             ->join('package_lists','package_lists.id','=','candidate_requests.package_type_id')
-            ->join('orders','candidates.id','=','orders.candidate_id','left outer')
+            ->leftJoin('orders','candidates.id','=','orders.candidate_id')
             ->where('candidate_requests.agent_reg_id',$current_agent_id)
-            ->where('orders.agent_reg_id',$current_agent_id)
             ->where('candidate_requests.status','=','approved')
             ->orderBy('candidates.id','ASC')
             ->get();
+
+
 
         //get candidate id from above
         //and match to the order table then we can get the payment status of the specific candidate
@@ -63,6 +64,7 @@ class LocalAgentController extends Controller
               return back()->with('error_message','Already approved');
           }
           else{
+
               CandidateRequests::where('candidate_id',$current_candidate_id)->
               where('agent_reg_id',$current_agent_id)
                   ->update(array('status'=>$request->get('status')));
@@ -209,30 +211,29 @@ class LocalAgentController extends Controller
         return view('home',$data);
     }
     public function requiredTasks(){
+      //getting package_type
+        $current_agent_id = Auth::user()->id;
+        $candidate_details=DB::table('candidates')
 
-
-        $current_agent_id=Auth::user()->id;
-        $required_task=DB::table('candidate_requests')
-            ->select(
-                'candidates.id','candidates.email','candidate_requests.agent_reg_id','candidate_requests.candidate_id','candidate_requests.status',
-                'package_lists.package_type','orders.payment_status','orders.phone','manage_services.service_type_id')
-
-            ->join('candidates','candidates.id','=','candidate_requests.candidate_id')
+            ->select('package_lists.package_type','candidates.email','candidates.firstName','candidate_requests.package_type_id','candidate_requests.agent_reg_id',
+            'manage_services.service_description','orders.payment_status'
+            ,'service_types.service_type')
+            ->join('candidate_requests','candidates.id','=','candidate_requests.candidate_id')
             ->join('package_lists','package_lists.id','=','candidate_requests.package_type_id')
-
-            ->join('manage_services','package_lists.id','=','manage_services.package_type_id')
-            ->join('orders','candidates.id','=','orders.candidate_id','left outer')
+            ->join('manage_services','manage_services.package_type_id','=','package_lists.id')
+            ->join('orders','candidates.id','=','orders.candidate_id')
+          //  ->join('job_applications','candidates.id','=','job_applications.candidateId')
+            ->join('service_types','service_types.id','=','manage_services.service_type_id')
+            ->where('orders.payment_status','=','Successful')
             ->where('candidate_requests.agent_reg_id',$current_agent_id)
-            ->where('orders.agent_reg_id',$current_agent_id)
-            ->where('orders.payment_status','=','successful')
             ->where('candidate_requests.status','=','approved')
-            ->orderBy('candidates.id','ASC')
+          //  ->where('job_applications.status','=','approved')
             ->get();
-        dd($required_task);
 
+       return view('local_agent.requiredTasks',['candidate_details'=>$candidate_details]);
+    }
+    public function visa_application($candidate_name){
 
-
-
-       // return view('local_agent.requiredTasks',$data);
+        return view('local_agent.visa_applications')->with('candidate_name',$candidate_name);
     }
 }
