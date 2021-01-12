@@ -48,8 +48,21 @@
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">Package name</h6>
-{{--                            <small class="text-muted">{{$package_type}}</small>--}}
+                            @foreach($employer_information as $employer_information)
+                            <h6 class="my-0">Employer's Email</h6>
+                            <p class="text-muted">{{$employer_information->email}}</p>
+                                <h6 class="my-0">Employer's Company</h6>
+                                <p class="text-muted">{{$employer_information->companyName}}</p>
+                                <h6 class="my-0">Employer's Company Country</h6>
+                                <p class="text-muted">{{$employer_information->companyCountry}}</p>
+                                @endforeach
+                            @foreach($job_positions as $job_position)
+                                <h6 class="my-0">Position applied for</h6>
+                                <p class="text-muted">{{$job_position->jobPosition}}</p>
+                                    @endforeach
+
+
+
                         </div>
                         {{--                    <span class="text-muted">1000</span>--}}
                     </li>
@@ -67,10 +80,10 @@
                     {{--                    </div>--}}
                     {{--                    <span class="text-muted">150</span>--}}
                     {{--                </li>--}}
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (BDT)</span>
+{{--                    <li class="list-group-item d-flex justify-content-between">--}}
+{{--                        <span>Total (BDT)</span>--}}
 {{--                        <strong>{{$demands}}</strong>--}}
-                    </li>
+{{--                    </li>--}}
                 </ul>
             </div>
             <div class="col-md-8 order-md-1">
@@ -106,8 +119,8 @@
 
                     <div class="mb-3">
                         <label for="email">Email <span class="text-muted"></span></label>
-                        <input type="email" name="customer_email" class="form-control" id="email"/>
-{{--                               placeholder="you@example.com" value="{{$candidates->email}}" required>--}}
+                        <input type="email" name="customer_email" class="form-control" id="email"
+                               placeholder="you@example.com" value="{{$candidate_email}}" required/>
                         <div class="invalid-feedback">
                             Please enter a valid email address for shipping updates.
                         </div>
@@ -130,14 +143,14 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="email">Position held <span class="text-muted"></span></label>
-                        <input type="email" name="customer_email" class="form-control" id="email"/>
-                        {{--                               placeholder="you@example.com" value="{{$candidates->email}}" required>--}}
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
-                    </div>
+{{--                    <div class="mb-3">--}}
+{{--                        <label for="email">Position held <span class="text-muted"></span></label>--}}
+{{--                        <input type="email" name="customer_email" class="form-control" id="email"/>--}}
+{{--                        --}}{{--                               placeholder="you@example.com" value="{{$candidates->email}}" required>--}}
+{{--                        <div class="invalid-feedback">--}}
+{{--                            Please enter a valid email address for shipping updates.--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 
 

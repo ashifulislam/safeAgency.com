@@ -211,11 +211,15 @@ class LocalAgentController extends Controller
         return view('home',$data);
     }
     public function requiredTasks(){
+
+        if(session('error_message')){
+            Alert::error('Error',session('error_message'))->autoClose(3000);
+        }
       //getting package_type
         $current_agent_id = Auth::user()->id;
         $candidate_details=DB::table('candidates')
 
-            ->select('package_lists.package_type','candidates.email','candidates.firstName','candidate_requests.package_type_id','candidate_requests.agent_reg_id',
+            ->select('package_lists.package_type','candidates.email','candidates.id','candidates.firstName','candidate_requests.package_type_id','candidate_requests.agent_reg_id',
             'manage_services.service_description','orders.payment_status'
             ,'service_types.service_type')
             ->join('candidate_requests','candidates.id','=','candidate_requests.candidate_id')
@@ -230,10 +234,58 @@ class LocalAgentController extends Controller
           //  ->where('job_applications.status','=','approved')
             ->get();
 
+
        return view('local_agent.requiredTasks',['candidate_details'=>$candidate_details]);
     }
-    public function visa_application($candidate_name){
 
-        return view('local_agent.visa_applications')->with('candidate_name',$candidate_name);
+    public function visa_application($candidate_name,$candidate_email,$candidate_id)
+    {
+        //agent is responsible for only one job post
+        $job_post_id = DB::table('job_applications')
+
+            ->select('job_applications.jobPostId','job_applications.status')
+            ->where('job_applications.candidateId',$candidate_id)
+            ->orderBy('created_at','desc')
+            ->first();
+        //dd($job_post_id);
+
+        if($job_post_id->status === 'pending')
+        {
+
+            return redirect()->back()->with('error_message','Job approval is not approved');
+
+        }
+        else
+            {
+
+                $employer_id = DB::table('job_posts')
+
+                ->select('job_posts.employerId')
+                ->where('job_posts.id',$job_post_id->jobPostId)
+                ->get();
+
+            foreach($employer_id as $employer_id){
+                $employer_id=$employer_id->employerId;
+            }
+
+            $employer_information = DB::table('employers')
+                ->select('employers.firstName','employers.email','employers.companyName','employers.companyCountry')
+                ->where('employers.id',$employer_id)
+                ->get();
+            //getting the position applied for
+            $job_position = DB::table('job_posts')
+
+                ->select('job_posts.jobPosition')
+                ->where('job_posts.id',$job_post_id->jobPostId)
+                ->get();
+
+            return view('local_agent.visa_applications',['employer_information'=>$employer_information],['job_positions'=>$job_position])
+
+                ->with('candidate_name',$candidate_name)
+                ->with('candidate_email',$candidate_email);
+        }
+
+
+
     }
 }
