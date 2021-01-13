@@ -14,17 +14,23 @@ class CreateVisaAppliesTable extends Migration
     public function up()
     {
         Schema::create('visa_applies', function (Blueprint $table) {
+
             $table->bigIncrements('id');
-            $table->string('full_name');
-            $table->string('father_name');
-            $table->string('mother_name');
-            $table->string('nationality');
-            $table->string('place_of_birth');
-            $table->string('data_of_birth');
-            $table->string('position_field');
+            $table->string('name');
+            $table->string('email');
+            $table->integer('age');
             $table->string('passport_no');
+            $table->string('nationality');
+            $table->string('state');
+            $table->string('zip');
+            $table->string('company_name');
+            $table->string('company_country');
+            $table->string('application_status');
+
             $table->unsignedBigInteger('agent_id');
             $table->foreign('agent_id')->references('id')->on('local_agents')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')->references('id')->on('candidates')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

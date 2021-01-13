@@ -191,11 +191,6 @@ class LocalAgentController extends Controller
 
         }
 
-
-
-
-
-
     }
     /**
      * Show the application dashboard.
@@ -210,7 +205,8 @@ class LocalAgentController extends Controller
 
         return view('home',$data);
     }
-    public function requiredTasks(){
+    public function requiredTasks()
+    {
 
         if(session('error_message')){
             Alert::error('Error',session('error_message'))->autoClose(3000);
@@ -226,12 +222,11 @@ class LocalAgentController extends Controller
             ->join('package_lists','package_lists.id','=','candidate_requests.package_type_id')
             ->join('manage_services','manage_services.package_type_id','=','package_lists.id')
             ->join('orders','candidates.id','=','orders.candidate_id')
-          //  ->join('job_applications','candidates.id','=','job_applications.candidateId')
             ->join('service_types','service_types.id','=','manage_services.service_type_id')
             ->where('orders.payment_status','=','Successful')
             ->where('candidate_requests.agent_reg_id',$current_agent_id)
             ->where('candidate_requests.status','=','approved')
-          //  ->where('job_applications.status','=','approved')
+
             ->get();
 
 
@@ -240,6 +235,11 @@ class LocalAgentController extends Controller
 
     public function visa_application($candidate_name,$candidate_email,$candidate_id)
     {
+        if(session('success_message'))
+        {
+
+            Alert::success('Success',session('success_message'))->autoClose(3000);
+        }
         //agent is responsible for only one job post
         $job_post_id = DB::table('job_applications')
 
@@ -247,7 +247,6 @@ class LocalAgentController extends Controller
             ->where('job_applications.candidateId',$candidate_id)
             ->orderBy('created_at','desc')
             ->first();
-        //dd($job_post_id);
 
         if($job_post_id->status === 'pending')
         {
@@ -282,7 +281,8 @@ class LocalAgentController extends Controller
             return view('local_agent.visa_applications',['employer_information'=>$employer_information],['job_positions'=>$job_position])
 
                 ->with('candidate_name',$candidate_name)
-                ->with('candidate_email',$candidate_email);
+                ->with('candidate_email',$candidate_email)
+                ->with('candidate_id',$candidate_id);
         }
 
 

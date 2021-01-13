@@ -169,7 +169,7 @@ Route::get('requiredTasks','LocalAgentController@requiredTasks')->name('required
 Route::get('visa_application/{candidate_name}/{candidate_email}/{candidate_id}','localAgentController@visa_application')->name('visa_application');
 
 Route::resource('packageType','localAgent\PackageTypeController');
-
+Route::resource('visaApplication','localAgent\VisaApplicationController');
 
 
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);

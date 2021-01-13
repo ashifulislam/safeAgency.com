@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/VisaApply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/VisaApply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_21_092405_create_visa_applies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_092405_create_visa_applies_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/local_agent/visa_applications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/visa_applications.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-22.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +315,8 @@
       <workItem from="1610353843516" duration="13402000" />
       <workItem from="1610376587787" duration="2611000" />
       <workItem from="1610419594864" duration="8077000" />
-      <workItem from="1610442008161" duration="15542000" />
+      <workItem from="1610442008161" duration="16369000" />
+      <workItem from="1610527785535" duration="16252000" />
     </task>
     <servers />
   </component>

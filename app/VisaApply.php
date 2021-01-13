@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class VisaApply extends Model
 {
-    public function localAgent(){
-        $this->belongsTo(LocalAgent::class,'agent_id');
-    }
+    protected $fillable = ['name','email','date_of_birth','passport_no','nationality'
+    ,'state','zip','company_name','company_country'];
 }

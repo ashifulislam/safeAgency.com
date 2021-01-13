@@ -48,15 +48,20 @@
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            @foreach($employer_information as $employer_information)
+
+                            @foreach($employer_information as $employer_info)
                             <h6 class="my-0">Employer's Email</h6>
-                            <p class="text-muted">{{$employer_information->email}}</p>
+                            <p class="text-muted">{{$employer_info->email}}</p>
                                 <h6 class="my-0">Employer's Company</h6>
-                                <p class="text-muted">{{$employer_information->companyName}}</p>
+                                <p class="text-muted">{{$employer_info->companyName}}</p>
                                 <h6 class="my-0">Employer's Company Country</h6>
-                                <p class="text-muted">{{$employer_information->companyCountry}}</p>
+                                <p class="text-muted">{{$employer_info->companyCountry}}</p>
                                 @endforeach
-                            @foreach($job_positions as $job_position)
+
+
+
+
+                        @foreach($job_positions as $job_position)
                                 <h6 class="my-0">Position applied for</h6>
                                 <p class="text-muted">{{$job_position->jobPosition}}</p>
                                     @endforeach
@@ -84,24 +89,33 @@
 {{--                        <span>Total (BDT)</span>--}}
 {{--                        <strong>{{$demands}}</strong>--}}
 {{--                    </li>--}}
+
                 </ul>
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Candidate information</h4>
-                <form action="{{ route('pay') }}" method="POST" class="needs-validation">
+                <form action="{{ route('visaApplication.store') }}" method="POST" class="needs-validation">
                     <input type="hidden" value="{{ csrf_token() }}" name="_token" />
-{{--                    <input type="hidden" value="{{$demands}}" name="demands" />--}}
-{{--                    <input type="hidden" value="{{$agent_id}}" name="agent_id" />--}}
+
+                    @foreach($employer_information as $employer_info)
+                    <input type="hidden" value="{{$employer_info->companyName}}" name="company_name" />
+                    <input type="hidden" value="{{$employer_info->companyCountry}}" name="company_country" />
+                    @endforeach
+                    <input type="hidden" value="approved" name="application_status" />
+                    <input type="hidden" value="{{$candidate_id}}" name="candidate_id" />
+
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="firstName">Full name</label>
-                            <input type="text" name="customer_name" class="form-control" id="customer_name" placeholder="Enter Name"
+                            <input type="text" name="candidate_name" class="form-control" id="candidate_name" placeholder="Enter Name"
                             value="{{$candidate_name}}">
-                            <div class="invalid-feedback">
-                                Valid customer name is required.
-                            </div>
+
+                                @error('candidate_name')
+                                <strong style="padding:inherit" class="alert alert-danger">{{ $message }}</strong>
+                                @enderror
                         </div>
                     </div>
+
 
 {{--                    <div class="mb-3">--}}
 {{--                        <label for="mobile">Mobile</label>--}}
@@ -119,28 +133,29 @@
 
                     <div class="mb-3">
                         <label for="email">Email <span class="text-muted"></span></label>
-                        <input type="email" name="customer_email" class="form-control" id="email"
-                               placeholder="you@example.com" value="{{$candidate_email}}" required/>
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
+                        <input type="email" name="candidate_email" class="form-control" id="email"
+                               placeholder="you@example.com" value="{{$candidate_email}}" />
+
+                            @error('candidate_email')
+                            <strong style="padding:inherit" class="alert alert-danger">{{ $message }}</strong>
+                            @enderror
                     </div>
 
                     <div class="mb-3">
                         <label for="email">Date of Birth <span class="text-muted"></span></label>
-                        <input type="date" name="customer_email" class="form-control" id="email"/>
+                        <input type="date" name="candidate_date_of_birth" class="form-control" id="date_of_birth" />
                         {{--                               placeholder="you@example.com" value="{{$candidates->email}}" required>--}}
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
+                        @error('candidate_date_of_birth')
+                        <strong style="padding:inherit" class="alert alert-danger">{{ $message }}</strong>
+                        @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="email">Passport_number <span class="text-muted"></span></label>
-                        <input type="email" name="customer_email" class="form-control" id="email"/>
+                        <label for="passport">Passport_number <span class="text-muted"></span></label>
+                        <input type="text" name="passport_no" class="form-control" id="passport"/>
                         {{--                               placeholder="you@example.com" value="{{$candidates->email}}" required>--}}
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
+                        @error('candidate_date_of_birth')
+                        <strong style="padding:inherit" class="alert alert-danger">{{ $message }}</strong>
+                        @enderror
                     </div>
 
 {{--                    <div class="mb-3">--}}
