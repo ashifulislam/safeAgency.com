@@ -171,6 +171,9 @@ Route::get('visa_application/{candidate_name}/{candidate_email}/{candidate_id}',
 Route::resource('packageType','localAgent\PackageTypeController');
 Route::resource('visaApplication','localAgent\VisaApplicationController');
 
+Route::get('service_detail','CandidateController@service_detail')->name('service_details');
+Route::get('print_visa','CandidateController@print_visa')->name('print_visa');
+
 
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
 Route::get('/example2/{demands}/{package_type}/{agent_id}/{package_type_id}', [SslCommerzPaymentController::class, 'exampleHostedCheckout'])->name('payment');

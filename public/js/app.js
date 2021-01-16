@@ -83939,6 +83939,9 @@ var pcoded = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
     }
   },
   methods: {
+    printme: function printme() {
+      window.print();
+    },
     send: function send() {
       var _this = this;
 

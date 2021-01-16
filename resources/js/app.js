@@ -73,6 +73,9 @@ const pcoded = new Vue({
 
     methods:
         {
+            printme(){
+                window.print();
+            },
             send() {
 
                 if (this.message.length != 0) {

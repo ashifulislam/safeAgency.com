@@ -31,6 +31,9 @@ class CreateVisaAppliesTable extends Migration
             $table->foreign('agent_id')->references('id')->on('local_agents')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('candidate_id');
             $table->foreign('candidate_id')->references('id')->on('candidates')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('job_post_id');
+            $table->foreign('job_post_id')->references('id')->on('job_posts')->onDelete('cascade');
             $table->timestamps();
         });
     }

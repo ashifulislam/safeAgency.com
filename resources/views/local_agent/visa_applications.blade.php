@@ -101,6 +101,12 @@
                     <input type="hidden" value="{{$employer_info->companyName}}" name="company_name" />
                     <input type="hidden" value="{{$employer_info->companyCountry}}" name="company_country" />
                     @endforeach
+
+                    <input type="hidden" value="{{$job_post_id->jobPostId}}" name="job_post_id"/>
+
+{{--                    @foreach($job_post_id as $job_post_id)--}}
+{{--                        <input type="hidden" value="{{}}" name="job_post_id"/>--}}
+{{--                    @endforeach--}}
                     <input type="hidden" value="approved" name="application_status" />
                     <input type="hidden" value="{{$candidate_id}}" name="candidate_id" />
 
@@ -183,7 +189,7 @@
                             <label for="country">Country</label>
                             <select class="custom-select d-block w-100" name="country" id="country" required>
                                 <option value="">Choose...</option>
-                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="{{$nationality_info->country}}">{{$nationality_info->country}}</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please select a valid country.
@@ -193,7 +199,7 @@
                             <label for="state">State</label>
                             <select class="custom-select d-block w-100" name="state" id="state" required>
                                 <option value="">Choose...</option>
-                                <option value="Dhaka">Dhaka</option>
+                                <option value="{{$nationality_info->state}}">{{$nationality_info->state}}</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please provide a valid state.
@@ -201,7 +207,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="zip">Zip</label>
-                            <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
+                            <input type="text" class="form-control" id="zip" name="zip" value="{{$nationality_info->zip}}" placeholder="" required>
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>

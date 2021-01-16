@@ -237,8 +237,11 @@ class LocalAgentController extends Controller
     {
         if(session('success_message'))
         {
-
             Alert::success('Success',session('success_message'))->autoClose(3000);
+        }
+        else if(session('error_message'))
+        {
+            Alert::error('Error',session('error_message'))->autoClose(3000);
         }
         //agent is responsible for only one job post
         $job_post_id = DB::table('job_applications')
@@ -256,6 +259,7 @@ class LocalAgentController extends Controller
         }
         else
             {
+
 
                 $employer_id = DB::table('job_posts')
 
@@ -278,11 +282,21 @@ class LocalAgentController extends Controller
                 ->where('job_posts.id',$job_post_id->jobPostId)
                 ->get();
 
+            //getting country, zip, state
+                $current_agent_id = Auth::user()->id;
+                $nationality_info = DB::table('orders')
+                ->select('orders.country','orders.state','orders.zip')
+                ->where('orders.agent_reg_id',$current_agent_id)
+                ->where('orders.candidate_id',$candidate_id)
+                ->first();
+
             return view('local_agent.visa_applications',['employer_information'=>$employer_information],['job_positions'=>$job_position])
 
                 ->with('candidate_name',$candidate_name)
                 ->with('candidate_email',$candidate_email)
-                ->with('candidate_id',$candidate_id);
+                ->with('candidate_id',$candidate_id)
+                ->with(['nationality_info'=>$nationality_info])
+               ->with('job_post_id',$job_post_id);
         }
 
 

@@ -21,12 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/VisaApply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/VisaApply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_21_092405_create_visa_applies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_092405_create_visa_applies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/localAgent/VisaApplicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/localAgent/VisaApplicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_132516_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_132516_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_29_092405_create_visa_applies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_092405_create_visa_applies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/local_agent/visa_applications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/visa_applications.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-27.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,16 +187,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\safeAgency.com\public\css" />
+      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\local_agent" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\local_agent" />
-      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\app\Http\Controllers\candidate" />
     </key>
   </component>
   <component name="RunManager">
@@ -317,6 +325,11 @@
       <workItem from="1610419594864" duration="8077000" />
       <workItem from="1610442008161" duration="16369000" />
       <workItem from="1610527785535" duration="16252000" />
+      <workItem from="1610595749158" duration="2456000" />
+      <workItem from="1610618371992" duration="15251000" />
+      <workItem from="1610701039443" duration="166000" />
+      <workItem from="1610712803962" duration="73000" />
+      <workItem from="1610800776012" duration="11392000" />
     </task>
     <servers />
   </component>
@@ -345,10 +358,10 @@
     </state>
     <state x="452" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608997270260" />
     <state x="530" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1608441190859" />
-    <state x="495" y="157" key="FileChooserDialogImpl" timestamp="1609733799247">
+    <state x="495" y="157" key="FileChooserDialogImpl" timestamp="1610800823990">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="495" y="157" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609733799247" />
+    <state x="495" y="157" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610800823990" />
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1608271107823" />
     <state x="441" y="87" key="NewPhpClassDialog" timestamp="1609162904583">
       <screen x="0" y="0" width="1366" height="728" />
