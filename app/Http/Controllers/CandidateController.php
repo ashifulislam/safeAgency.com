@@ -318,17 +318,24 @@ class CandidateController extends Controller
 
         $candidate_name = Auth::user()->firstName;
 
-//        $package_type_id = DB::table('candidate_requests')
-//            ->select('candidate_requests.package_type_id')
-//            ->where('candidate_requests.candidate_id',$current_candidate_id)
-//            ->where('candidate_requests.agent_reg_id',$job_post_id->agent_id)
-//            ->first();
-//        dd($package_type_id);
+        $package_type_id = DB::table('candidate_requests')
+            ->select('candidate_requests.package_type_id')
+            ->where('candidate_requests.candidate_id',$current_candidate_id)
+            ->where('candidate_requests.agent_reg_id',$job_post_id->agent_id)
+            ->value('package_type_id');
+
+        $package_type = DB::table('package_lists')
+            ->select('package_type')
+            ->where('id',$package_type_id)
+            ->first();
+
+
 
        return view('candidate.print_visa')
            ->with('employer_info',$employer_info)
            ->with('candidate_name',$candidate_name)
-           ->with('order_details',$order_details);
+           ->with('order_details',$order_details)
+           ->with('package_type',$package_type);
 
     }
 }

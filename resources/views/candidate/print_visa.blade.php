@@ -134,10 +134,10 @@
                                 <div class="col-sm-4 invoice-col">
 
                                     <address>
-                                        <h5 style="color:black";>Employer Details</h5>
+                                        <h5 style="color:black">Employer Details</h5>
 
-                                     <b style="color:darkslategray;">Name :   {{$employer_info->firstName}}</b> <br>
-                                     <b style="color:darkslategray;">Email :  {{$employer_info->email}}</b>  <br>
+                                     <b style="color:darkslategray">Name :   {{$employer_info->firstName}}</b> <br>
+                                     <b style="color:darkslategray">Email :  {{$employer_info->email}}</b>  <br>
 
                                     </address>
                                 </div>
@@ -146,21 +146,21 @@
 
                                     <address>
                                         <h5 style="color:black;">Company Details</h5>
-                                   <b style="color:darkslategray; ">Company Name :    {{$employer_info->companyName}}</b><br>
-                                    <b style="color:darkslategray; ">Company Country :    {{$employer_info->companyCountry}}</b><br>
-                                    <b style="color:darkslategray; ">Company State :    {{$employer_info->companyState}}</b><br>
-                                    <b style="color:darkslategray;"> Company Zip Code :   {{$employer_info->companyZipCode}}</b>
+                                   <b style="color:darkslategray">Company Name :    {{$employer_info->companyName}}</b><br>
+                                    <b style="color:darkslategray ">Company Country :    {{$employer_info->companyCountry}}</b><br>
+                                    <b style="color:darkslategray">Company State :    {{$employer_info->companyState}}</b><br>
+                                    <b style="color:darkslategray"> Company Zip Code :   {{$employer_info->companyZipCode}}</b>
                                     </address>
                                 </div>
                                 <!-- /.col -->
                                 <div class="col-sm-4 invoice-col">
 
-                                    <h5 style="color:black;">Payment Details</h5>
+                                    <h5 style="color:black">Payment Details</h5>
 
 
-                                    <b style="color:darkslategray;">Transaction_id : {{$order_details->transaction_id}} </b><br>
-                                    <b style="color:darkslategray; ">Amount : {{$order_details->amount}} </b> <br>
-                                    <b style="color:darkslategray; ">Currency : {{$order_details->currency}}</b>
+                                    <b style="color:darkslategray">Transaction_id : {{$order_details->transaction_id}} </b><br>
+                                    <b style="color:darkslategray ">Amount : {{$order_details->amount}} </b> <br>
+                                    <b style="color:darkslategray ">Currency : {{$order_details->currency}}</b>
 
                                 </div>
                                 <!-- /.col -->
@@ -173,41 +173,20 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th>Qty</th>
-                                            <th>Package name</th>
-                                            <th>Serial #</th>
-                                            <th>Package description</th>
+                                            <th style="color:black;">Qty</th>
+                                            <th style="color:black;">Package name</th>
+{{--                                            <th>Serial #</th>--}}
+{{--                                            <th>Package description</th>--}}
 {{--                                            <th>Amount</th>--}}
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Call of Duty</td>
-                                            <td>455-981-221</td>
-                                            <td>El snort testosterone trophy driving gloves handsome</td>
+                                            <td style="color:darkslategray" >1</td>
+                                            <td >{{$package_type->package_type}}</td>
+{{--                                            <td>455-981-221</td>--}}
+{{--                                            <td>El snort testosterone trophy driving gloves handsome</td>--}}
 {{--                                            <td>$64.50</td>--}}
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Need for Speed IV</td>
-                                            <td>247-925-726</td>
-                                            <td>Wes Anderson umami biodiesel</td>
-{{--                                            <td>$50.00</td>--}}
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Monsters DVD</td>
-                                            <td>735-845-642</td>
-                                            <td>Terry Richardson helvetica tousled street art master</td>
-{{--                                            <td>$10.70</td>--}}
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Grown Ups Blue Ray</td>
-                                            <td>422-568-642</td>
-                                            <td>Tousled lomo letterpress</td>
-{{--                                            <td>$25.99</td>--}}
                                         </tr>
                                         </tbody>
                                     </table>
@@ -265,14 +244,14 @@
                                 <div class="col-12">
 
                                     <a href="" @click.prevent="printme" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-                                    <button type="button" class="btn btn-success float-right">
-                                        <i class="fa fa-credit-card"></i>
-                                        Submit Payment
-                                    </button>
+{{--                                    <button type="button" class="btn btn-success float-right">--}}
+{{--                                        <i class="fa fa-credit-card"></i>--}}
+{{--                                        Submit Payment--}}
+{{--                                    </button>--}}
 
-                                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                        <i class="fa fa-download"></i> Generate PDF
-                                    </button>
+{{--                                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">--}}
+{{--                                        <i class="fa fa-download"></i> Generate PDF--}}
+{{--                                    </button>--}}
 
                                 </div>
                             </div>
@@ -284,6 +263,7 @@
 
                 </div>
             </div>
+        </div>
 {{--            <div class="container-fluid">--}}
 {{--                <div class="row">--}}
 {{--                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
@@ -347,7 +327,7 @@
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--            </div>--}}
-        </div>
+
 
 
         <script src="{{asset('/js/app.js')}}"></script>
