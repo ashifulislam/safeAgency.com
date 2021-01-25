@@ -59,7 +59,7 @@
                                                         <div class="user-title">
 
                                                             <h2>{{$singleAgent->name}}</h2>
-                                                            <span class="text-white">Web designer</span>
+                                                            <span class="text-white">{{$singleAgent->skill}}</span>
                                                         </div>
                                                     </div>
                                                     <div>

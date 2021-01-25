@@ -21,9 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/print_visa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/print_visa.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentRegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/LocalAgent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LocalAgent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_07_162130_create_local_agents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_07_162130_create_local_agents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-30.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,23 +183,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/local_agent" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\safeAgency.com\public\css" />
-      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\local_agent" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\local_agent" />
+      <recent name="C:\xampp\htdocs\safeAgency.com\public\css" />
+      <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
     </key>
   </component>
   <component name="RunManager">
@@ -320,7 +334,13 @@
       <workItem from="1610712803962" duration="73000" />
       <workItem from="1610800776012" duration="11392000" />
       <workItem from="1610873162094" duration="65000" />
-      <workItem from="1610893483073" duration="2021000" />
+      <workItem from="1610893483073" duration="2329000" />
+      <workItem from="1610959092548" duration="146000" />
+      <workItem from="1610978558994" duration="2486000" />
+      <workItem from="1610987747994" duration="1982000" />
+      <workItem from="1611044591983" duration="29000" />
+      <workItem from="1611063227574" duration="6479000" />
+      <workItem from="1611590317684" duration="7554000" />
     </task>
     <servers />
   </component>
@@ -340,19 +360,23 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610989077091">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1610989077091" />
     <state x="428" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608614287844">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="428" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1608614287844" />
-    <state x="452" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608997270261">
+    <state x="452" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611593082755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="452" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608997270260" />
+    <state x="452" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1611593082755" />
     <state x="530" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1608441190859" />
-    <state x="495" y="157" key="FileChooserDialogImpl" timestamp="1610873235521">
+    <state x="495" y="157" key="FileChooserDialogImpl" timestamp="1611044622337">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="495" y="157" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610873235521" />
+    <state x="495" y="157" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611044622337" />
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1608271107823" />
     <state x="441" y="87" key="NewPhpClassDialog" timestamp="1609162904583">
       <screen x="0" y="0" width="1366" height="728" />

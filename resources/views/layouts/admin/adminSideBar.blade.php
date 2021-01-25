@@ -33,6 +33,8 @@
                             <span class="mini-click-non">Super Admin</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
+                            <li><a title="Dashboard v.1" href="{{route('admin.post.showAgentReg')}}"><span class="mini-sub-pro">Registration Requests</span></a></li>
+
                             <li><a title="Dashboard v.1" href="{{route('admin.post.showPending')}}"><span class="mini-sub-pro">Pending Posts</span></a></li>
                             <li><a title="Dashboard v.2" href="{{route('admin.post.showApprove')}}"><span class="mini-sub-pro">Approved Posts</span></a></li>
                             <li><a title="Dashboard v.2" href=""><span class="mini-sub-pro">Show Employer list</span></a></li>
@@ -138,6 +140,6 @@
     </nav>
 </div>
 </body>
-
+@include('sweetalert::alert')
 
 

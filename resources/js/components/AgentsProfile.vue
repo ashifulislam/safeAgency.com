@@ -81,10 +81,10 @@
                                             <a class="nav-link" data-toggle="tab" href="#binfo" role="tab">User's Services</a>
                                             <div class="slide"></div>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">User's Contacts</a>
-                                            <div class="slide"></div>
-                                        </li>
+<!--                                        <li class="nav-item">-->
+<!--                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">User's Contacts</a>-->
+<!--                                            <div class="slide"></div>-->
+<!--                                        </li>-->
                                         <li class="nav-item">
                                             <a class="nav-link" data-toggle="tab" href="#review" role="tab">Reviews</a>
                                             <div class="slide"></div>

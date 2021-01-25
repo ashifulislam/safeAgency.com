@@ -16,7 +16,7 @@ class LocalAgent extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','phone'
+        'name', 'email', 'password','phone','license_number','reg_status',
     ];
 //    public function visaApplies(){
 //        $this->hasMany(VisaApply::class,'agent_id');

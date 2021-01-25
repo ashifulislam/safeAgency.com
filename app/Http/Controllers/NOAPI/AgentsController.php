@@ -28,7 +28,7 @@ class AgentsController extends Controller
 
         $user_id = Auth::user()->id;
 
-        return  $user=  DB::table('local_agents')
+        return  $user =  DB::table('local_agents')
 
             ->select('agents_profiles.bio','agents_profiles.photo','agents_profiles.about','agents_profiles.interest','agents_profiles.skill','agents_profiles.agent_reg_id','local_agents.name','local_agents.email','agents_profiles.age','local_agents.phone')
 

@@ -103,6 +103,10 @@ Route::get('/pendingEmployer/posts','EmployerController@showPendingJobApplicatio
 Route::put('/pendingEmployer/posts/{id}','EmployerController@updatePendingJobApplicationStatus')->name('employer.jobApplication.update');
 
 Route::get('/pendingAgent','EmployerController@showPendingAgentRequest')->name('employer.pendingAgent');
+Route::get('/agentRegReq','AdminController@showAgentRegReq')->name('admin.post.showAgentReg');
+Route::get('/approveRegReq/{id}','AdminController@approveRegReq')->name('admin.approveRegReq');
+Route::get('/rejectRegReq/{id}','AdminController@rejectRegReq')->name('admin.rejectRegReq');
+Route::get('/regStatus','LocalAgentController@regStatus')->name('registrationStatus');
 
 
 Route::prefix('agent')->group(function(){

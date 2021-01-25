@@ -83,6 +83,7 @@
                     <!-- Authentication card start -->
                     <form method="POST" action="{{ route('localAgent.register.submit') }}" class="md-float-material form-material m-t-40 m-b-40">
                         @csrf
+                        <input type="hidden" name="reg_status" value="pending"/>
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="row m-b-20">
@@ -129,6 +130,16 @@
                                     <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"  placeholder="phone" required autocomplete="email">
                                     <span class="form-bar"></span>
                                     @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group form-primary">
+                                    <input id="license_number" type="text" class="form-control @error('license_number') is-invalid @enderror" name="license_number"  placeholder="Enter you license number" >
+                                    <span class="form-bar"></span>
+                                    @error('license_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

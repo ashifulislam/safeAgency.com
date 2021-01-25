@@ -50,7 +50,8 @@ class LocalAgentLoginController extends Controller
     {
         return view('Auth.authOfLocalAgent.local_agent_login_update');
     }
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         $this->validateLogin($request);
 //        $this->validate($request,[
 //            'email'=>'required|string',
@@ -62,12 +63,14 @@ class LocalAgentLoginController extends Controller
             'password'=>$request->password,
         ];
         // dd($credentials);
-        if(Auth::guard('localAgent')->attempt($credentials,$request->remember)){
+        if(Auth::guard('localAgent')->attempt($credentials,$request->remember))
+        {
             return redirect()->intended(route('localAgent.dashboard'));
         }
         return $this->sendFailedLoginResponse($request);
     }
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::guard('localAgent')->logout();
         return redirect('/homePage');
     }

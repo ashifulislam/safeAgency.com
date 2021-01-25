@@ -75,6 +75,7 @@ class LocalAgentRegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'max:11'],
+            'license_number' => ['required', 'string', 'max:11'],
 
         ]);
     }
@@ -92,6 +93,8 @@ class LocalAgentRegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
+            'license_number' => $data['license_number'],
+            'reg_status'=>$data['reg_status']
 
         ]);
     }

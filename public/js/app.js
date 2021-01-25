@@ -52697,7 +52697,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                                Delete Your Profile\n                                            "
+                                    "\n                                                    Delete Your Profile\n                                                "
                                   )
                                 ]
                               )
@@ -52719,7 +52719,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                                Edit Your Profile\n                                            "
+                                    "\n                                                    Edit Your Profile\n                                                "
                                   )
                                 ]
                               )
@@ -53392,19 +53392,6 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#contacts", role: "tab" }
-              },
-              [_vm._v("User's Contacts")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
                 attrs: { "data-toggle": "tab", href: "#review", role: "tab" }
               },
               [_vm._v("Reviews")]
@@ -53524,7 +53511,7 @@ var staticRenderFns = [
                                     }),
                                     _c("i", { staticClass: "helper" }),
                                     _vm._v(
-                                      " Male\n                                                                                            "
+                                      " Male\n                                                                                                "
                                     )
                                   ])
                                 ]
@@ -53540,7 +53527,7 @@ var staticRenderFns = [
                                     }),
                                     _c("i", { staticClass: "helper" }),
                                     _vm._v(
-                                      " Female\n                                                                                            "
+                                      " Female\n                                                                                                "
                                     )
                                   ])
                                 ]
@@ -53737,7 +53724,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                '                                                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able To Do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pain.</p>\n                                                    '
+                '                                                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able To Do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pain.</p>\n                                                        '
               )
             ]
           )
@@ -54489,7 +54476,7 @@ var staticRenderFns = [
                     { staticClass: "list-group-item justify-content-between" },
                     [
                       _vm._v(
-                        "\n                                                            Project\n                                                            "
+                        "\n                                                                Project\n                                                                "
                       ),
                       _c(
                         "span",
@@ -54504,7 +54491,7 @@ var staticRenderFns = [
                     { staticClass: "list-group-item justify-content-between" },
                     [
                       _vm._v(
-                        "\n                                                            Notes\n                                                            "
+                        "\n                                                                Notes\n                                                                "
                       ),
                       _c(
                         "span",
@@ -54519,7 +54506,7 @@ var staticRenderFns = [
                     { staticClass: "list-group-item justify-content-between" },
                     [
                       _vm._v(
-                        "\n                                                            Activity\n                                                            "
+                        "\n                                                                Activity\n                                                                "
                       ),
                       _c(
                         "span",
@@ -54534,7 +54521,7 @@ var staticRenderFns = [
                     { staticClass: "list-group-item justify-content-between" },
                     [
                       _vm._v(
-                        "\n                                                            Schedule\n                                                            "
+                        "\n                                                                Schedule\n                                                                "
                       ),
                       _c(
                         "span",

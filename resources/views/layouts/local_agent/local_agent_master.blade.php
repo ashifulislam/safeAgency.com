@@ -315,6 +315,7 @@
                         <div class="pcoded-navigatio-lavel">Navigation</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="pcoded-hasmenu">
+                                @if(Auth::user()->reg_status != 'pending')
                                 <a href="javascript:void(0)">
                                     <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
                                     <span class="pcoded-mtext">ManageProfile</span>
@@ -462,7 +463,16 @@
                                     <span class="pcoded-mtext">Tasks</span>
                                 </a>
                             </li>
+                            @endif
+                            <li class="active">
+                                <a href="{{route('registrationStatus')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Registration Status</span>
+                                </a>
+                            </li>
+
                         </ul>
+
 
 
                     </div>

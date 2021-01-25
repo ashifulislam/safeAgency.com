@@ -14,12 +14,15 @@ class CreateLocalAgentsTable extends Migration
     public function up()
     {
         Schema::create('local_agents', function (Blueprint $table) {
+
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone');
+            $table->string('license_number');
+            $table->string('reg_status');
             $table->rememberToken();
             $table->timestamps();
         });

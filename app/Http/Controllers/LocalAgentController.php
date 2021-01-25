@@ -302,4 +302,14 @@ class LocalAgentController extends Controller
 
 
     }
+    public function regStatus()
+    {
+        $current_agent_id = Auth::user()->id;
+        $reg_status = DB::table('local_agents')
+            ->select('reg_status')
+            ->where('id',$current_agent_id)
+            ->get();
+
+        return view('local_agent.regStatus',['reg_status'=>$reg_status]);
+    }
 }
