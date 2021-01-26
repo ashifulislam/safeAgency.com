@@ -107,7 +107,7 @@ Route::get('/agentRegReq','AdminController@showAgentRegReq')->name('admin.post.s
 Route::get('/approveRegReq/{id}','AdminController@approveRegReq')->name('admin.approveRegReq');
 Route::get('/rejectRegReq/{id}','AdminController@rejectRegReq')->name('admin.rejectRegReq');
 Route::get('/regStatus','LocalAgentController@regStatus')->name('registrationStatus');
-
+Route::get('/providedTasks','LocalAgentController@providedTasks')->name('providedTasks');
 
 Route::prefix('agent')->group(function(){
     Route::get('/','LocalAgentController@index')->name('localAgent.dashboard');

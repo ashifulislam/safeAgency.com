@@ -424,7 +424,7 @@
                             <li class="active">
                                 <a href="{{route('chat')}}">
                                     <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
-                                    <span class="pcoded-mtext">chatWithCandidate</span>
+                                    <span class="pcoded-mtext">Chat</span>
                                 </a>
                             </li>
 {{--                            <li class="active">--}}
@@ -436,31 +436,38 @@
                             <li class="active">
                                 <a href="{{route('seeEmployers')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">EmployerLists</span>
+                                    <span class="pcoded-mtext">Employer Lists</span>
                                 </a>
                             </li>
                             <li class="active">
                                 <a href="{{route('seeRequests')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">EmployerRequests</span>
+                                    <span class="pcoded-mtext">Employer Requests</span>
                                 </a>
                             </li>
                             <li class="active">
                                 <a href="{{route('candidateRequests')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">CandidateRequests</span>
+                                    <span class="pcoded-mtext">Candidate Requests</span>
                                 </a>
                             </li>
                             <li class="active">
                                 <a href="{{route('approvedCandidates')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">ApprovedCandidates</span>
+                                    <span class="pcoded-mtext">Approved Candidates</span>
                                 </a>
                             </li>
                             <li class="active">
                                 <a href="{{route('requiredTasks')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                                     <span class="pcoded-mtext">Tasks</span>
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="{{route('providedTasks')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Provided Services</span>
                                 </a>
                             </li>
                             @endif

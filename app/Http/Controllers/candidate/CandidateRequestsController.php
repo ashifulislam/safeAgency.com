@@ -23,7 +23,6 @@ class CandidateRequestsController extends Controller
             ->select('candidate_requests.candidate_id','local_agents.email','candidate_requests.status','local_agents.name','agents_profiles.skill')
             ->join('agents_profiles','local_agents.id','=','agents_profiles.agent_reg_id')
             ->join('candidate_requests','local_agents.id','candidate_requests.agent_reg_id')
-            ->join('orders','orders.agent_reg_id','=','local_agents.id')
             ->where('candidate_requests.candidate_id',$current_candidate)
             ->get();
 

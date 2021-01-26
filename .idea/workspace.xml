@@ -21,23 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/localAgent/LocalAgentRegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/LocalAgent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LocalAgent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_07_162130_create_local_agents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_07_162130_create_local_agents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-29.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-31.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,16 +178,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
-      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\local_agent" />
       <recent name="C:\xampp\htdocs\safeAgency.com\public\css" />
       <recent name="C:\xampp\htdocs\safeAgency.com\resources\views\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
       <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\local_agent" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\layouts\candidate" />
+      <recent name="C:\xampp\htdocs\safeAgency2.com\resources\views\candidate" />
     </key>
   </component>
   <component name="RunManager">
@@ -341,6 +329,7 @@
       <workItem from="1611044591983" duration="29000" />
       <workItem from="1611063227574" duration="6479000" />
       <workItem from="1611590317684" duration="7554000" />
+      <workItem from="1611658267581" duration="14177000" />
     </task>
     <servers />
   </component>
