@@ -86,16 +86,16 @@
                                             <div class="slide"></div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#binfo" role="tab">User's Services</a>
+                                            <a class="nav-link" data-toggle="tab" href="#binfo" role="tab">Candidate's Services</a>
                                             <div class="slide"></div>
                                         </li>
+{{--                                        <li class="nav-item">--}}
+{{--                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">User's Contacts</a>--}}
+{{--                                            <div class="slide"></div>--}}
+{{--                                        </li>--}}
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">User's Contacts</a>
-                                            <div class="slide"></div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Reviews</a>
-                                            <div class="slide"></div>
+{{--                                            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Reviews</a>--}}
+{{--                                            <div class="slide"></div>--}}
                                         </li>
                                     </ul>
                                 </div>
@@ -356,190 +356,61 @@
                                                 <h5 class="card-header-text">User Services</h5>
                                             </div>
                                             <div class="card-block">
+
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="card b-l-success business-info services m-b-20">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">Shivani Hero</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
+                                                        @foreach($candidate_details as $candidate_detail)
+
+                                                            <div class="card b-l-success business-info services m-b-20">
+                                                                <div class="card-header">
+                                                                    <div class="service-header"><a href="#"><h5 class="card-header-text">Email: {{$candidate_detail->email}}</h5></a></div> <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip" class="dropdown-toggle addon-btn text-muted f-right service-btn"></span>
+                                                                    <div class="dropdown-menu dropdown-menu-right b-none services-list"><a href="#!" class="dropdown-item"><i class="icofont icofont-edit"></i> Edit</a> <a href="#!" class="dropdown-item"><i class="icofont icofont-ui-delete"></i> Delete</a> <a href="#!" class="dropdown-item"><i class="icofont icofont-eye-alt"></i> View</a></div></div>
+                                                                <div class="card-block">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+
+                                                                            <p class="task-detail">Age: {{$candidate_detail->age}}</p>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+
+                                                                            <p class="task-detail">Nationality: {{$candidate_detail->nationality}}</p>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+
+                                                                            <p class="task-detail">Company Name: {{$candidate_detail->company_name}}</p>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+
+                                                                            <p class="task-detail">Company Country: {{$candidate_detail->company_country}}</p>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+
+                                                                            <p class="task-detail">Service: completed</p>
+                                                                        </div>
                                                                     </div>
-                                                                    <!-- end of col-sm-8 -->
                                                                 </div>
-                                                                <!-- end of row -->
                                                             </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <div class="card b-l-danger business-info services">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">Dress and Sarees</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
-                                                                    </div>
-                                                                    <!-- end of col-sm-8 -->
-                                                                </div>
-                                                                <!-- end of row -->
-                                                            </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card b-l-info business-info services">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">Shivani Auto Port</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
-                                                                    </div>
-                                                                    <!-- end of col-sm-8 -->
-                                                                </div>
-                                                                <!-- end of row -->
-                                                            </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card b-l-warning business-info services">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">Hair stylist</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
-                                                                    </div>
-                                                                    <!-- end of col-sm-8 -->
-                                                                </div>
-                                                                <!-- end of row -->
-                                                            </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card b-l-danger business-info services">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">BMW India</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
-                                                                    </div>
-                                                                    <!-- end of col-sm-8 -->
-                                                                </div>
-                                                                <!-- end of row -->
-                                                            </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card b-l-success business-info services">
-                                                            <div class="card-header">
-                                                                <div class="service-header">
-                                                                    <a href="#">
-                                                                        <h5 class="card-header-text">Shivani Hero</h5>
-                                                                    </a>
-                                                                </div>
-                                                                <span class="dropdown-toggle addon-btn text-muted f-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                                         </span>
-                                                                <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                                                    <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-block">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="task-detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod temp or incidi dunt ut labore et.Lorem ipsum dolor sit amet, consecte.</p>
-                                                                    </div>
-                                                                    <!-- end of col-sm-8 -->
-                                                                </div>
-                                                                <!-- end of row -->
-                                                            </div>
-                                                            <!-- end of card-block -->
-                                                        </div>
-                                                    </div>
+
                                                 </div>
+
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5 class="card-header-text">Profit</h5>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="main" style="height: 300px; width: 100%; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1605623794020"><div style="position: relative; overflow: hidden; width: 100px; height: 300px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none;"></div><canvas width="100" height="300" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="100" height="300" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="100" height="300" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                        <div class="row">--}}
+{{--                                            <div class="col-lg-12">--}}
+{{--                                                <div class="card">--}}
+{{--                                                     <div class="card-header">--}}
+{{--                                                        <h5 class="card-header-text">Profit</h5>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="card-block">--}}
+{{--                                                        <div id="main" style="height: 300px; width: 100%; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1605623794020"><div style="position: relative; overflow: hidden; width: 100px; height: 300px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none;"></div><canvas width="100" height="300" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="100" height="300" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="100" height="300" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
                                         <!-- info card end -->
                                     </div>
                                     <!-- tab pane info end -->
@@ -624,56 +495,6 @@
                                                                                     <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 0px;">Name</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 0px;">Email</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Mobileno.: activate to sort column ascending" style="width: 0px;">Mobileno.</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Favourite: activate to sort column ascending" style="width: 0px;">Favourite</th><th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 0px;">Action</th></tr>
                                                                                     </thead>
                                                                                     <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                                                                     <tr role="row" class="odd">
                                                                                         <td class="sorting_1">Garrett Winters</td>

@@ -27,7 +27,8 @@
                     <td>{{$candidate_detail->payment_status}}</td>
 {{--                    <td>{{$candidate_detail->status}}</td>--}}
                 <td>
-                    @if($candidate_detail->service_type==='Can manage visa')
+                    @if($candidate_detail->service_type === 'Can manage visa')
+
                         <a href="{{route('visa_application',[$candidate_detail->firstName,$candidate_detail->email,$candidate_detail->id])}}"> <button style="height:30px; padding-top:4px;" class="btn btn-success">Apply Visa</button></a>
 
                         @elseif($candidate_detail->service_type==='Can search job')

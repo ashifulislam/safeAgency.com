@@ -80,18 +80,18 @@
                                             <a class="nav-link active" data-toggle="tab" href="#personal" role="tab">CreateProfile</a>
                                             <div class="slide"></div>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#binfo" role="tab">See Customers</a>
-                                            <div class="slide"></div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">Communicate</a>
-                                            <div class="slide"></div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Reviews</a>
-                                            <div class="slide"></div>
-                                        </li>
+<!--                                        <li class="nav-item">-->
+<!--                                            <a class="nav-link" data-toggle="tab" href="#binfo" role="tab">See Customers</a>-->
+<!--                                            <div class="slide"></div>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item">-->
+<!--                                            <a class="nav-link" data-toggle="tab" href="#contacts" role="tab">Communicate</a>-->
+<!--                                            <div class="slide"></div>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item">-->
+<!--                                            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Reviews</a>-->
+<!--                                            <div class="slide"></div>-->
+<!--                                        </li>-->
                                     </ul>
                                 </div>
                                 <!-- tab header end -->
@@ -628,7 +628,7 @@
                                     <div class="tab-pane" id="review" role="tabpanel">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h5 class="card-header-text">Review</h5>
+<!--                                                <h5 class="card-header-text">Review</h5>-->
                                             </div>
                                             <div class="card-block">
                                                 <ul class="media-list">

@@ -54,13 +54,16 @@ class SslCommerzPaymentController extends Controller
 
         }
 
-        else {
+        else
+            {
 
-            if($package_type=='complete package'){
+            if($package_type=='complete package')
+            {
                 return redirect()->route('showPackageList',[$agent_id])
                     ->with('not_approved','Request is not approved by the agent or already paid');
             }
-            else{
+            else
+                {
                 return redirect()->route('showPartialPackage',[$agent_id])
                     ->with('not_approved','Request is not approved by the agent or already paid');
             }
@@ -231,7 +234,7 @@ class SslCommerzPaymentController extends Controller
 
     public function success(Request $request)
     {
-        echo "Transaction is Successful";
+//        echo "Transaction is Successful";
 
         $tran_id = $request->input('tran_id');
         $amount = $request->input('amount');
@@ -273,10 +276,13 @@ class SslCommerzPaymentController extends Controller
              That means through IPN Order status already updated. Now you can just show the customer that transaction is completed. No need to udate database.
              */
             echo "Transaction is successfully Completed";
-        } else {
+        } else
+            {
             #That means something wrong happened. You can redirect customer to your product page.
             echo "Invalid Transaction";
         }
+
+
 
 
     }

@@ -2,9 +2,9 @@
             <div class="footer-widget">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3">
-                            <div class="single-widget-home mb-5 mb-lg-0">
-                                <h3 class="mb-4">top products</h3>
+                        <div  class="col-xl-2 col-lg-3">
+                            <div  class="single-widget-home mb-5 mb-lg-0">
+                                <h3 style="padding-top:25px;"  class="mb-4">top products</h3>
                                 <ul>
                                     <li class="mb-2"><a href="#">managed website</a></li>
                                     <li class="mb-2"><a href="#">managed reputation</a></li>
@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-xl-5 offset-xl-1 col-lg-6">
                             <div class="single-widget-home mb-5 mb-lg-0">
-                                <h3 class="mb-4">newsletter</h3>
+                                <h3 class="mb-4" style="padding-top:25px;">newsletter</h3>
                                 <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>
                                 <form action="{{route('subscriber.store')}}" method="post">
                                     @csrf
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-xl-3 offset-xl-1 col-lg-3">
                             <div class="single-widge-home">
-                                <h3 class="mb-4">instagram feed</h3>
+                                <h3 class="mb-4" style="padding-top:25px;">instagram feed</h3>
                                 <div class="feed">
                                     <img src="user/images/feed1.jpg" alt="feed">
                                     <img src="user/images/feed2.jpg" alt="feed">
@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;Daffodil International University <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </span>
                         </div>

@@ -146,8 +146,11 @@ class CandidateController extends Controller
             ->where(['local_agents.id' => $agent_id])
             ->get();
 
+        $candidate_details = DB::table('visa_applies')
 
-        return view('candidate.showAllAgentProfile', $data);
+            ->where('agent_id','=',$agent_id)
+            ->get();
+        return view('candidate.showAllAgentProfile', $data,['candidate_details'=>$candidate_details]);
     }
 
     public function candidateHome()

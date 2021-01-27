@@ -53368,33 +53368,7 @@ var staticRenderFns = [
                 staticClass: "nav-link active",
                 attrs: { "data-toggle": "tab", href: "#personal", role: "tab" }
               },
-              [_vm._v("Personal Info")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#binfo", role: "tab" }
-              },
-              [_vm._v("User's Services")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#review", role: "tab" }
-              },
-              [_vm._v("Reviews")]
+              [_vm._v("Your Profile")]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "slide" })
@@ -57261,45 +57235,6 @@ var staticRenderFns = [
             ),
             _vm._v(" "),
             _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#binfo", role: "tab" }
-              },
-              [_vm._v("See Customers")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#contacts", role: "tab" }
-              },
-              [_vm._v("Communicate")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "tab", href: "#review", role: "tab" }
-              },
-              [_vm._v("Reviews")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "slide" })
           ])
         ]
       )
@@ -59186,9 +59121,7 @@ var staticRenderFns = [
       { staticClass: "tab-pane", attrs: { id: "review", role: "tabpanel" } },
       [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h5", { staticClass: "card-header-text" }, [_vm._v("Review")])
-          ]),
+          _c("div", { staticClass: "card-header" }),
           _vm._v(" "),
           _c("div", { staticClass: "card-block" }, [
             _c("ul", { staticClass: "media-list" }, [

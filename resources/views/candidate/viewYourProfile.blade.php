@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{asset('candidate/style.CSS')}}"/>
 </head>
 <body>
+
 <div class="maincontent">
 
     <div class="left_content">

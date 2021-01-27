@@ -36,8 +36,6 @@ class AgentsController extends Controller
             ->where(['local_agents.id'=>$user_id])
             ->get();
 
-
-
     }
     public function update(Request $request, $id)
     {

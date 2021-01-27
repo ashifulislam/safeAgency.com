@@ -322,9 +322,12 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class=" pcoded-hasmenu">
+
                                         <router-link to="/agentsProfile">
                                             <span class="pcoded-mtext">Agent</span>
                                         </router-link>
+
+
                                         <ul class="pcoded-submenu">
 
 
@@ -467,7 +470,7 @@
                             <li class="active">
                                 <a href="{{route('providedTasks')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">Provided Services</span>
+                                    <span class="pcoded-mtext">Benifited Candidates</span>
                                 </a>
                             </li>
                             @endif
@@ -475,6 +478,12 @@
                                 <a href="{{route('registrationStatus')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                                     <span class="pcoded-mtext">Registration Status</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="{{route('localAgent.logout')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Logout</span>
                                 </a>
                             </li>
 

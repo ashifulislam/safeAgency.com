@@ -265,8 +265,6 @@ class LocalAgentController extends Controller
             }
             else
             {
-
-
                 $employer_id = DB::table('job_posts')
 
                     ->select('job_posts.employerId')
@@ -310,9 +308,6 @@ class LocalAgentController extends Controller
             {
             return redirect()->back()->with('error_job_post','You did not apply for a job');
         }
-
-
-
     }
     public function regStatus()
     {
@@ -327,11 +322,6 @@ class LocalAgentController extends Controller
 
     public function providedTasks()
     {
-
-
-
-
-
         $current_agent_id = Auth::user()->id;
         //getting provided tasks
         $provided_services = DB::table('visa_applies')

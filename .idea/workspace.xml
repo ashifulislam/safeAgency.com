@@ -21,11 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/CandidateRequestsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NOAPI/AgentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/local_agent/files/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/local_agent/files/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AgentsProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CreateAgentProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CreateAgentProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/showAllAgentProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/candidate/viewYourProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/viewYourProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/employer/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-12-31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/RegStatus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/RegStatus.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/provided_services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/provided_services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2021-01-01.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,6 +345,8 @@
       <workItem from="1611063227574" duration="6479000" />
       <workItem from="1611590317684" duration="7554000" />
       <workItem from="1611658267581" duration="14177000" />
+      <workItem from="1611725168008" duration="5744000" />
+      <workItem from="1611738426412" duration="22571000" />
     </task>
     <servers />
   </component>

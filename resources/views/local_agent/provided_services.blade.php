@@ -7,11 +7,13 @@
             <thead>
             <tr>
 
-                <th>Candidate Email</th>
+                <th>Candidate Name</th>
 {{--                <th>Service</th>--}}
-                <th>Package</th>
+                <th>Candidate Email</th>
+                <th>Candidate Age</th>
 {{--                <th>Payment_status</th>--}}
 {{--                <th>Job_approval</th>--}}
+                <th>Nationality</th>
                 <th>Tasks</th>
 {{--                <th>Update</th>--}}
 {{--                <th>Delete</th>--}}
@@ -26,7 +28,11 @@
 
                 @foreach($provided_services as $provided_service)
                     <tr>
+                        <td>{{$provided_service->name}}</td>
                         <td>{{$provided_service->email}}</td>
+                        <td>{{$provided_service->age}}</td>
+                        <td>{{$provided_service->nationality}}</td>
+                        <td>Completed</td>
                     </tr>
                 @endforeach
                 @endif

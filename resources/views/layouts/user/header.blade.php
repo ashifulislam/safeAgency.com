@@ -20,13 +20,14 @@
                             <li><a href="#">Agent</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('localAgent.dashboard')}}">Your Profile </a></li>
+                                    <li><a href="{{route('localAgent.register')}}">Registration</a></li>
+
 
                                 </ul>
                             </li>                            <li><a href="#">Employer</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{url('employerProfile')}}">Registration</a></li>
                                     <li><a href="{{route('employer.show')}}">Your Profile </a></li>
-                                    <li><a href="blog-details.html">Post a Job </a></li>
 
                                 </ul>
                             </li>
@@ -34,7 +35,6 @@
                                 <ul class="sub-menu">
                                     <li><a href="{{route('candidate.profile')}}">Create Profile</a></li>
                                     <li><a href="{{route('candidate.home')}}">Your Profile</a></li>
-                                    <li><a href="{{url('jobApplication')}}">Apply Job </a></li>
 
                                 </ul>
                             </li>

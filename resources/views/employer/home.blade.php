@@ -336,7 +336,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top text-center">
-                        <h2>Get job information daily</h2>
+                        <h2 style="padding-top:20px;">Get job information daily</h2>
                         <p>Subscribe to our newsletter and get a coupon code!</p>
                     </div>
                 </div>
@@ -347,6 +347,7 @@
                         <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'" required>
                         <button type="submit" class="template-btn">subscribe now</button>
                     </form>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -413,7 +414,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top text-center">
-                        <h2>Company latest news</h2>
+                        <h2 style="padding-top:20px;">Company latest news</h2>
                         <p>Open lesser winged midst wherein may morning</p>
                     </div>
                 </div>
@@ -483,7 +484,7 @@
                                 <a href="#">
                                     <p>
                                         <span>Available</span> <br>
-                                        on App Store
+                                        will be in App Store
                                     </p>
                                 </a>
                             </div>
@@ -492,7 +493,7 @@
                                 <a href="#">
                                     <p>
                                         <span>Available</span> <br>
-                                        on Play Store
+                                        will be in Play Store
                                     </p>
                                 </a>
                             </div>
