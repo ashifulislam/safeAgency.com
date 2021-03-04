@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Job Single</title>
+    <title>SafeAgency.com</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('user/images/logo/favicon.png')}}" type="image/x-icon">
@@ -91,6 +91,8 @@
                                         <option value=""> Choose Type</option>
                                         <option  value="SSC">SSC</option>
                                         <option  value="HSC">HSC</option>
+                                        <option  value="Honors">Honors</option>
+                                        <option  value="Bsc in cse">Bsc in cse</option>
                                     </select><br>
                                       <br>
                                         <p>From</p>
@@ -113,6 +115,9 @@
                                                 <option value=""> Choose Type</option>
                                                 <option  value="Web Developer">Web Developer</option>
                                                 <option  value="App Developer">App Developer</option>
+                                                <option  value="Construction">Construction(worker)</option>
+                                                <option  value="Repairing">Repair(worker)</option>
+                                                <option  value="Manufacturing">Manufacture(worker)</option>
                                             </select><br><br>
                                             <p>From</p>
                                             <input type="date" placeholder="application deadline" name="eFrom"/>

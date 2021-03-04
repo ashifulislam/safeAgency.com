@@ -34,8 +34,8 @@
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
                             <li><a title="Dashboard v.1" href="{{route('employer.show')}}"><span class="mini-sub-pro">Employer Profile</span></a></li>
-                            <li><a title="Dashboard v.1" href="{{route('employer.jobApplication.showPending')}}"><span class="mini-sub-pro">Pending Job Application</span></a></li>
-                            <li><a title="Dashboard v.1" href="{{route('employer.pendingAgent')}}"><span class="mini-sub-pro">Pending Agent Request</span></a></li>
+                            <li><a title="Dashboard v.1" href="{{route('employer.jobApplication.showPending')}}"><span class="mini-sub-pro">Job Application</span></a></li>
+                            <li><a title="Dashboard v.1" href="{{route('employer.pendingAgent')}}"><span class="mini-sub-pro">Agent Request</span></a></li>
 
                             <li><a title="Dashboard v.2" href="{{route('employer.category')}}"><span class="mini-sub-pro">Add Job Category</span></a></li>
                             <li><a title="Dashboard v.3" href="{{route('jobPost.create')}}"> <span class="mini-sub-pro">Post A Job</span></a></li>

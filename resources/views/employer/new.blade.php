@@ -116,9 +116,9 @@
                                             <br><br>
                                             <input type="number" placeholder="enter company's zip Code" name="CompanyZipCode" value="<?php echo $updateEmployerProfile->companyZipCode?>" >
                                             <br><br>
-                                            <input type="checkbox" name="myCheck" id="myCheck">I agree with the terms and conditions<br><br>
+                                            <input type="checkbox" name="myCheck" id="myCheck">I agree with the terms and conditions<br>
 
-                                            <input  type="submit" name="update" value="UPDATE"><br><br><br>
+                                            <input class="center-block" type="submit" name="update" value="UPDATE"><br><br><br>
                                         </form>
                                     </div>
                                 </div>

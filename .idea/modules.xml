@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CRUD/.idea/CRUD.iml" filepath="$PROJECT_DIR$/../CRUD/.idea/CRUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CRUD_Frontend/.idea/CRUD_Frontend.iml" filepath="$PROJECT_DIR$/../CRUD_Frontend/.idea/CRUD_Frontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/chakuri3.com.iml" filepath="$PROJECT_DIR$/.idea/chakuri3.com.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crudWithTemplate/.idea/crudWithTemplate.iml" filepath="$PROJECT_DIR$/../crudWithTemplate/.idea/crudWithTemplate.iml" />
     </modules>

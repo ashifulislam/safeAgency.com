@@ -67,15 +67,6 @@
     <link rel="stylesheet" href="{{asset('user')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('employer')}}/css/employer.css">
 </head>
-@if(session('success'))
-    {{session('success')}}
-@endif
-@if(session('emailExists'))
-    {{session('emailExists')}}
-@endif
-@if(session('DeleteSuccess'))
-    {{session('DeleteSuccess')}}
-@endif
 
 <body>
 

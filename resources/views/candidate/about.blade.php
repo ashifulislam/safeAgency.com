@@ -38,46 +38,26 @@
 <section class="jobs-area section-padding">
     <div class="container">
         <div class="row">
-
-            <h1>Job Application List</h1>
             <div class="col-lg-12">
-                @foreach($appliedJobs as $application)
+
                     <div class="single-job mb-4 d-lg-flex justify-content-between">
                         <div class="job-text">
-                            <ul class="mt-4">
-                                <div class="col-lg-6 "style="float: left;position:relative">
-
-                                    <h4>Category</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-map-marker"></i> {{ $application->jobPost->jobCategory->categoryName }}</h5></li>
-                                    <h4>Company Name</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-map-marker"></i> {{ $application->jobPost->employer->companyName }}</h5></li>
-                                    <h4>Your Name</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> {{Auth::user()->firstName}}</h5></li>
-                                </div>
-                                <div class="col-lg-6 " style="float:left;position:relative">
-                                    <h4>Position Applied</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> {{$application->jobPost->jobPosition}}</h5></li>
-                                    <h4>Status</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> {{$application->status}}</h5></li>
-                                    <h4>company Details</h4>
-                                    <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> {{$application->jobPost->employer->companyDetails}}</h5></li>
-                                </div>
-
-
-{{--                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: {{$jobPost->deadLine}}</h5></li>--}}
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-
-                        </div>
-                        <div class="job-btn align-self-center">
-
-{{--                            <a href="{{ route('post.details',$jobPost->id) }}" class="third-btn">apply</a>--}}
+                            <p style="color:black;">SafeAgency.com is a platform where a candidate can find their dream job in abroad easily and safely. If they can complete the whole job process then this is ok. If they could not then a candidate can find and hire an experienced agent who is waiting to assist you. An employer can find their desired candidate from this platform.</p>
+                            <p style="color:black;">How the safety is going to ensure?</p>
+                            <p style="color:black;">The safety is going to ensure by some filtering process</p>
+                            <ol>
+                                <li style="color:black;">We provide a safe authentication system for all the users</li>
+                                <li style="color:black;">Here super admin is going to verify the agent through the agent's license number</li>
+                                <li style="color:black;">An employer can not make a job post directly. The job post is going to verify through the super admin</li>
+                                <li style="color:black;">A candidate can transact their money through the safe SSLCOMMERZ platform</li>
+                            </ol>
                         </div>
                     </div>
 
-                @endforeach
             </div>
+        </div>
+        <div class="more-job-btn mt-5 text-center">
+            <a style="margin-bottom: 15px;" href="#" class="template-btn">more job post</a>
         </div>
     </div>
 </section>

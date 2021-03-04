@@ -19,25 +19,26 @@ use Auth;
 class EmployerController extends Controller
 {
 
-    public function chat(){
+    public function chat()
+    {
+        //To view chat page
 
         return view('employer.liveChat');
 
     }
 
 
-    public function send(Request $request){
-        // return $request->all();
+    public function send(Request $request)
+    {
+        //To send the message
+
         $user = Auth::user()->firstName;
-
-
-
         event(new ChatEvent($request->message,$user));
 
     }
-    public function approveRequest(Request $request,$id){
-
-
+    public function approveRequest(Request $request,$id)
+    {
+        //To approve requests
         $current_employer_id=Auth::user()->id;
          AgentRequest::where('agent_reg_id', $id)->
            where('emp_id',$current_employer_id)
@@ -46,9 +47,10 @@ class EmployerController extends Controller
         return redirect()->back()->with('success_message','The request is approved');
 
     }
- public function rejectRequest(Request $request,$id){
+ public function rejectRequest(Request $request,$id)
+ {
 
-
+        //To reject requests
         $current_employer_id=Auth::user()->id;
          AgentRequest::where('agent_reg_id', $id)->
            where('emp_id',$current_employer_id)
@@ -59,26 +61,25 @@ class EmployerController extends Controller
     }
 
 
-    public function createJobCategory(Request $request){
+    public function createJobCategory(Request $request)
+    {
+        //To create job category
 
         if(session('success_message')){
             Alert::success('Success', session('success_message'))->autoClose(3000);
 
         }
 
-
         return view('employer/jobCategory')->with('email',$request->session()->get('user'));
     }
-    public function createJobPost(Request $request){
+    public function createJobPost(Request $request)
+    {
+        //To create job post
         return view('employer/employerJobPost');
     }
-    public function addJobCategory(Request $request){
-
-//           $this->validate($request,[
-//            'categoryName'=>'required',
-//            'categoryType'=>'required',
-//               'myCheck'=>'required'
-//        ]);
+    public function addJobCategory(Request $request)
+    {
+        //To add job category
         $rules=[
             'categoryName'=>['required'],
             'categoryType'=>['required'],
@@ -99,7 +100,12 @@ class EmployerController extends Controller
 
     public function showEmployerList()
     {
-        //
+        //To show all employers
+        if(session('success'))
+        {
+            Alert::success('Success',session('success'));
+        }
+
         $user_id = Auth::user()->id;
         $data['data'] = DB::table('employers')->where('id' ,'=', $user_id)->get();
         if(count ($data)>0){
@@ -108,14 +114,17 @@ class EmployerController extends Controller
     }
 
 
-    public function updateEmployer($id){
-         $addJobCategory=Employer::find($id);
+    public function updateEmployer($id)
+    {
+        //To update employers
 
-
+         $addJobCategory = Employer::find($id);
          return view('employer/updateEmployerProfile',['updateEmployerProfile'=>$addJobCategory]);
 
     }
-    public function editEmployer(Request $request,$id){
+    public function editEmployer(Request $request,$id)
+    {
+        //To edit employers
         $this->validate($request,[
             'FirstName'=>'required',
             'LastName'=>'required',
@@ -136,24 +145,28 @@ class EmployerController extends Controller
                      'companyZipCode'=>$request->input('CompanyZipCode'));
         $updateEmployer=Employer::where('id',$id);
         $updateEmployer->update($update);
-        return redirect('/show')->with('success','Updated Successfully');
+        return redirect('/show')->with('success','Profile Updated Successfully');
 
     }
-    public function deleteEmployer($id){
-
+    public function deleteEmployer($id)
+    {
+       //To delete employer
         $delete=Employer::where('id',$id);
         $delete->delete();
         return redirect('/show')->with('DeleteSuccess','Deleted Successfully');
     }
 
 
-    public function showSingleInfo($id){
+    public function showSingleInfo($id)
+    {
+        //To get only single information
         $showEmployer=Employer::find($id);
        return view('employer/viewSingleInfo',['viewSingleInfo'=>$showEmployer]);
     }
 
     public function __construct()
     {
+        //Ensure the authentication
         $this->middleware('auth:employer');
     }
     /**
@@ -163,9 +176,12 @@ class EmployerController extends Controller
      */
     public function index()
     {
+        //
         return view('employer/admin_home');
     }
-    public function showPendingAgentRequest(){
+    public function showPendingAgentRequest()
+    {
+        //To show all pending requests here
 
         $current_employer_id=Auth::user()->id;
         $data = [];
@@ -190,7 +206,6 @@ class EmployerController extends Controller
     public function showPendingJobApplication(){
         //current employer and emp_id of the specific job post then get the data
         //specific job post id and employer of this specific job post id
-//        $data['pendingPosts'] = JobApplication::where('status','pending')->with('candidate')->orderBy('id','DESC')->get();
           $current_employer_id=Auth::user()->id;
             $data['pendingPosts']=DB::table('job_applications')
             ->select('job_applications.id','candidates.firstName','candidates.email','candidates.skill_name'
@@ -206,8 +221,9 @@ class EmployerController extends Controller
 
         return view('employer.pendingJobApplication',$data);
     }
-    public function updatePendingJobApplicationStatus(Request $request, $id){
-        // dd($request->all());
+    public function updatePendingJobApplicationStatus(Request $request, $id)
+    {
+      //To update pending job application status
         $jobApplication = JobApplication::findOrFail($id);
         $jobApplication->status = $request->input('status');
         $jobApplication->save();

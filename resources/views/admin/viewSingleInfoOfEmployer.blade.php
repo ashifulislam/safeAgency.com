@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Product List | Nalika - Material Admin Template</title>
+    <title>Super Admin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -19,8 +19,8 @@
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/font-awesome.min.css">
-	<!-- nalika Icon CSS
-		============================================ -->
+    <!-- nalika Icon CSS
+        ============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/nalika-icon.css">
     <!-- owl.carousel CSS
 		============================================ -->
@@ -59,10 +59,10 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/responsive.css">
-     <link rel="shortcut icon" href="{{asset('user/images/logo/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('user/images/logo/favicon.png')}}" type="image/x-icon">
 {{--      <link rel="stylesheet" href="{{asset('user')}}/css/bootstrap-4.1.3.min.css">--}}
 {{--        <link rel="stylesheet" href="{{asset('user')}}/css/style.css">--}}
-    <!-- modernizr JS
+<!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -77,13 +77,13 @@
  @endif
 
 <body>
-@include('layouts/user/employerSideBar');
+@include('layouts/admin/adminSideBar');
 
 
 <div class="all-content-wrapper">
 
     <div class="container-fluid">
-                @include('layouts/user/employerNavBar');
+        @include('layouts/admin/adminNavBar');
 
         <div class="header-advance-area">
 
@@ -102,7 +102,7 @@
 											</div>
 											<div class="breadcomb-ctn">
 												<h2>Employer Details</h2>
-												<p>Welcome to Your Profile <span class="bread-ntd"></span></p>
+												<p>Welcome to Your Profile <span class="bread-ntd">Admin Template</span></p>
 											</div>
 										</div>
                                     </div>
@@ -124,53 +124,51 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
                             <h4>Employer List</h4>
-                            <div class="add-product">
-                                <a href="{{route('employer.show')}}">Back To Your Profile</a>
-                            </div>
+
                             <table>
                                 <tr>
                                     <th>ID</th>
                                     <th>FirstName</th>
                                     <th>LastName</th>
                                     <th>Email</th>
-                                    <th>CompanyName</th>
-                                    <th>CompanyDetails</th>
-                                    <th>CompanyCountry</th>
-                                    <th>CompanyState</th>
-                                    <th>CompanyZipCode</th>
+                                    <th>Company Name</th>
+                                    <th>Company Details</th>
+                                    <th>Company Country</th>
+                                    <th>Company State</th>
+                                    <th>Company ZipCode</th>
 
                                 </tr>
 
                               <tr>
 
                     <td>
-                         {{$viewSingleInfo->id}}
+                         {{$viewSingleInfoOfEmployer->id}}
                     </td>
                     <td>
-                         {{$viewSingleInfo->firstName}}
+                         {{$viewSingleInfoOfEmployer->firstName}}
                     </td>
                     <td>
-                        {{$viewSingleInfo->lastName}}
+                        {{$viewSingleInfoOfEmployer->lastName}}
                     </td>
                       <td>
-                        {{$viewSingleInfo->email}}
+                        {{$viewSingleInfoOfEmployer->email}}
                     </td>
                       <td>
-                        {{$viewSingleInfo->companyName}}
+                        {{$viewSingleInfoOfEmployer->companyName}}
                     </td>
                       <td>
-                        {{$viewSingleInfo->companyDetails}}
+                        {{$viewSingleInfoOfEmployer->companyDetails}}
                     </td>
-                      <td>
-                        {{$viewSingleInfo->companyCountry}}
-                    </td>
-                      <td>
-                        {{$viewSingleInfo->companyState}}
-                    </td>
+                                  <td>
+                                      {{$viewSingleInfoOfEmployer->companyCountry}}
+                                  </td>
+                                  <td>
+                                      {{$viewSingleInfoOfEmployer->companyState}}
+                                  </td>
+                                  <td>
+                                      {{$viewSingleInfoOfEmployer->companyZipCode}}
+                                  </td>
 
-                  <td>
-                        {{$viewSingleInfo->companyZipCode}}
-                    </td>
 
 
                  </tr>
@@ -192,7 +190,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 

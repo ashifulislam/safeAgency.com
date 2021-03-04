@@ -40,6 +40,7 @@ Route::get('/updateCandidateProfile/{id}','CandidateController@updateCandidate')
 
 Route::get('/viewSingleInfo/{id}','EmployerController@showSingleInfo');
 Route::get('/viewSingleInfoCandidate/{id}','AdminController@showSingleInfo');
+Route::get('/viewSingleInfoEmployers/{id}','AdminController@showSingleInfoOfEmployer');
 Route::get('/jobCategory','EmployerController@createJobCategory')->name('employer.category');
 Route::post('/addJobCategory','EmployerController@addJobCategory');
 Route::resource('jobPost','JobPostController');
@@ -74,6 +75,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('logout', 'admin\LoginController@logout')->name('admin.logout');
 });
 Route::get('/homePage','candidate\HomeController@showHome')->name('home.page');
+Route::get('/about','candidate\HomeController@about')->name('about');
 Route::get('/category/posts/{id}','candidate\HomeController@categoryWiseJobPosts')->name('category.jobPosts');
 Route::post('/job/search','candidate\HomeController@searchjob')->name('job.search');
 Route::get('/postDetails/{id}','candidate\HomeController@showJobDetails')->name('post.details');
@@ -83,6 +85,7 @@ Route::get('/postDetails/{id}','candidate\HomeController@showJobDetails')->name(
 Route::get('/candidateHome','CandidateController@candidateHome')->name('candidate.home');
 Route::get('/adminHome','AdminController@adminHome')->name('admin.home');
 Route::get('/showCandidates','AdminController@showCandidates')->name('admin.show');
+Route::get('/showEmployers','AdminController@showEmployers')->name('admin.employerShow');
 Route::post('/subscriber','SubscriberController@store')->name('subscriber.store');
 
 Route::get('/userSubscriber','admin\SubscriberController@showSubscribers')->name('subscriber.show');
@@ -190,3 +193,7 @@ Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+
+
+Route::get('/logout','Employer\LoginController@logout')->name('employerLogout');
+Route::get('/logoutOfCandidate','Candidate\LoginController@logout')->name('candidateLogout');

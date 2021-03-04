@@ -66,6 +66,6 @@ class LoginController extends Controller
     }
     public function logout(Request $request){
         Auth::guard('employer')->logout();
-        return redirect('/');
+        return redirect('/homePage');
     }
 }

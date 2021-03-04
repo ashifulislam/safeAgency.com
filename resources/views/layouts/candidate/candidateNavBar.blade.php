@@ -170,7 +170,7 @@
                                                 </li>
                                                 <li>
                                                     @if(Auth::guard('candidate')->check())
-                                                        <a href="{{route('candidate.logout')}}"> <span class="icon nalika-unlocked author-log-ic"></span>Logout</a>
+                                                        <a href="{{route('candidateLogout')}}"> <span class="icon nalika-unlocked author-log-ic"></span>Logout</a>
                                                     @else
 
                                                         <a href="#" ><span class="icon nalika-unlocked author-log-ic"></span>login</a>

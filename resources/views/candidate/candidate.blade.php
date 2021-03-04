@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Chakuri.com</title>
+    <title>SafeAgency.com</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('user')}}/images/logo/favicon.png" type="image/x-icon">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="more-job-btn mt-5 text-center">
-            <a href="#" class="template-btn">more job post</a>
+            <a style="margin-bottom: 15px;" href="#" class="template-btn">more job post</a>
         </div>
     </div>
 </section>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Local Agent Dashboard</title>
+    <title>Agent Dashboard</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -312,11 +312,13 @@
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
                     <div class="pcoded-inner-navbar main-menu">
-                        <div class="pcoded-navigatio-lavel">Navigation</div>
+                        <div class="pcoded-navigatio-lavel">Agent Panel</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="pcoded-hasmenu">
+
                                 @if(Auth::user()->reg_status != 'pending')
-                                <a href="javascript:void(0)">
+
+                                    <a href="javascript:void(0)">
                                     <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
                                     <span class="pcoded-mtext">ManageProfile</span>
                                 </a>
@@ -430,24 +432,7 @@
                                     <span class="pcoded-mtext">Chat</span>
                                 </a>
                             </li>
-{{--                            <li class="active">--}}
-{{--                                <a href="{{route('chatWithCandidate')}}">--}}
-{{--                                    <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>--}}
-{{--                                    <span class="pcoded-mtext">ChatWithCandidate</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-                            <li class="active">
-                                <a href="{{route('seeEmployers')}}">
-                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">Employer Lists</span>
-                                </a>
-                            </li>
-                            <li class="active">
-                                <a href="{{route('seeRequests')}}">
-                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
-                                    <span class="pcoded-mtext">Employer Requests</span>
-                                </a>
-                            </li>
+
                             <li class="active">
                                 <a href="{{route('candidateRequests')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
@@ -473,7 +458,26 @@
                                     <span class="pcoded-mtext">Benifited Candidates</span>
                                 </a>
                             </li>
+
+                            <li class="active">
+                                <a href="{{route('seeEmployers')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Employer Lists</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="{{route('seeRequests')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Employer Requests</span>
+                                </a>
+                            </li>
                             @endif
+                            <li class="active">
+                                <a href="{{route('localAgent.dashboard')}}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Home</span>
+                                </a>
+                            </li>
                             <li class="active">
                                 <a href="{{route('registrationStatus')}}">
                                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>

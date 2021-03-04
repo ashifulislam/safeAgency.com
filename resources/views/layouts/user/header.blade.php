@@ -16,7 +16,7 @@
                     <div class="main-menu">
                         <ul>
                             <li class="active"><a href="{{route('home.page')}}">home</a></li>
-                            <li><a href="about.html">about us</a></li>
+                            <li><a href="{{route('about')}}">about us</a></li>
                             <li><a href="#">Agent</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('localAgent.dashboard')}}">Your Profile </a></li>

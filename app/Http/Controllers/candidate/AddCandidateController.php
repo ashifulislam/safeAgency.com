@@ -37,9 +37,6 @@ class AddCandidateController extends Controller
             'email'=>'required',
             'password'=>'required|min: 4|',
             'reType'=>'required',
-            'institute'=>'required',
-            'org'=>'required',
-            'address'=>'required',
             'softSkills'=>'required',
             'skill_name'=>'required',
             'myCheck'=>'required'

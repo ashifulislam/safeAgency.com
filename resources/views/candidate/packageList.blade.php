@@ -33,7 +33,7 @@
     <div id="binfo" role="tabpanel" class="tab-pane active">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-header-text">Agent Services</h5></div>
+                <h5 class="card-header-text">Complete Packages</h5></div>
             <div class="card-block">
                 <div class="row">
 

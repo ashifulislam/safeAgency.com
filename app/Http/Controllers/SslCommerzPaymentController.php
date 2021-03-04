@@ -260,7 +260,9 @@ class SslCommerzPaymentController extends Controller
                     ->where('transaction_id', $tran_id)
                     ->update(['payment_status' => 'Successful']);
 
-                echo "<br >Transaction is successfully Completed";
+                return redirect('/candidateHome')
+                    ->with('transaction','Transaction is successfully completed');
+
             } else {
                 /*
                 That means IPN did not work or IPN URL was not set in your merchant panel and Transation validation failed.
@@ -275,7 +277,9 @@ class SslCommerzPaymentController extends Controller
             /*
              That means through IPN Order status already updated. Now you can just show the customer that transaction is completed. No need to udate database.
              */
-            echo "Transaction is successfully Completed";
+
+
+            return redirect('/candidateHome')->with('success','Transaction is successfully completed');
         } else
             {
             #That means something wrong happened. You can redirect customer to your product page.

@@ -18,11 +18,13 @@ class CandidateController extends Controller
 {
     public function __construct()
     {
+        //To ensure the authentication
         $this->middleware('auth:candidate')->except('showAllAgent', 'showPackageList', 'showPartialPackageList');
     }
 
     public function chat()
     {
+        //To show chat view page
 
         return view('candidate.liveChat');
 
@@ -30,6 +32,7 @@ class CandidateController extends Controller
 
     public function send(Request $request)
     {
+        //To send the message
 
         $user = Auth::user()->firstName;
         event(new ChatEvent($request->message, $user));
@@ -38,6 +41,7 @@ class CandidateController extends Controller
 
     public function showPartialPackageList($agent_id)
     {
+        //Getting all partial packages
 
         if (session('success_message')) {
 
@@ -73,7 +77,7 @@ class CandidateController extends Controller
             $total_amount = $total_amount + $singleDemand->demand;
         }
 
-
+        //getting package_type_id
         $packageTypeId = DB::table('package_lists')
             ->select('manage_services.package_type_id', 'package_lists.package_type')
             ->join('manage_services', 'package_lists.id', '=', 'manage_services.package_type_id')
@@ -85,6 +89,7 @@ class CandidateController extends Controller
 
     public function showPackageList($agent_id)
     {
+        //Getting complete packages
         if (session('success_message')) {
 
             Alert::success('Success', session('success_message'))->autoClose(4000);
@@ -138,6 +143,7 @@ class CandidateController extends Controller
 
     public function showAllAgent($agent_id)
     {
+        //Demonstration of all existing agent
 
 
         $data['agents'] = DB::table('local_agents')
@@ -155,13 +161,20 @@ class CandidateController extends Controller
 
     public function candidateHome()
     {
+        //Getting home
+        if (session('transaction')) {
+
+            Alert::success('Success', session('transaction'))->autoClose(3000);
+
+        }
         return view('candidate/candidateHome');
     }
 
 
     public function showCandidate()
     {
-        //
+        //Getting all candidates here
+
         $user_id = Auth::user()->id;
         $data['data'] = DB::table('candidates')->where('id', '=', $user_id)->get();
         if (count($data) > 0) {
@@ -173,7 +186,7 @@ class CandidateController extends Controller
 
     public function showCandidateForUpdate()
     {
-        //
+        //To update candidates
         $user_id = Auth::user()->id;
         $data['data'] = DB::table('candidates')->where('id', '=', $user_id)->get();
         if (count($data) > 0) {
@@ -193,6 +206,7 @@ class CandidateController extends Controller
 
     public function editCandidate(Request $request, $id)
     {
+        //Edit the details
 
         $this->validate($request, [
             'firstName' => 'required',
@@ -224,6 +238,7 @@ class CandidateController extends Controller
 
     public function deleteCandidate($id)
     {
+        //To delete specific candidate
         $delete = Candidate::where('id', $id);
         $delete->delete();
         return redirect('/showForUpdate')->with('DeleteSuccess', 'Deleted Successfully');
@@ -231,11 +246,13 @@ class CandidateController extends Controller
 
     public function showApplicationForm()
     {
+        //To view of job application form
         return view('candidate/jobApplicationForm');
     }
 
     public function jobApplication($id)
     {
+        //To perform job application
         $jobPosts['jobPosts'] = JobPost::with('employer')->find($id);
         if (session('error_message')) {
 
@@ -266,6 +283,7 @@ class CandidateController extends Controller
 
     public function service_detail()
     {
+        //Getting all of the service details
 
         $current_candidate = Auth::user()->id;
 
@@ -292,6 +310,7 @@ class CandidateController extends Controller
 
     public function print_visa()
     {
+        //To print the details
         $current_candidate_id = Auth::user()->id;
         //getting job post id
         $job_post_id = DB::table('visa_applies')

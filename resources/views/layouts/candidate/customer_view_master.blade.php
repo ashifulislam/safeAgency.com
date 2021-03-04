@@ -173,7 +173,7 @@
                                                 <ul>
                                                     <li class="active"><a href="{{route('home.page')}}">home</a></li>
                                                     <li>
-                                                        <a href="about.html">about us</a></li>
+                                                        <a href="{{route('about')}}">about us</a></li>
                                                     <li>
                                                         <a href="#">agent</a>
                                                         <ul class="sub-menu1">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Product List | Nalika - Material Admin Template</title>
+    <title>Super Admin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -19,8 +19,8 @@
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/font-awesome.min.css">
-	<!-- nalika Icon CSS
-		============================================ -->
+    <!-- nalika Icon CSS
+        ============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/nalika-icon.css">
     <!-- owl.carousel CSS
 		============================================ -->
@@ -59,10 +59,10 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('user/showEmployer')}}/css/responsive.css">
-     <link rel="shortcut icon" href="{{asset('user/images/logo/favicon.png')}}" type="image/x-icon">
-      <link rel="stylesheet" href="{{asset('user')}}/css/bootstrap-4.1.3.min.css">
-        <link rel="stylesheet" href="{{asset('user')}}/css/style.css">
-    <!-- modernizr JS
+    <link rel="shortcut icon" href="{{asset('user/images/logo/favicon.png')}}" type="image/x-icon">
+{{--      <link rel="stylesheet" href="{{asset('user')}}/css/bootstrap-4.1.3.min.css">--}}
+{{--        <link rel="stylesheet" href="{{asset('user')}}/css/style.css">--}}
+<!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -77,7 +77,13 @@
  @endif
 
 <body>
+@include('layouts/admin/adminSideBar');
 
+
+<div class="all-content-wrapper">
+
+    <div class="container-fluid">
+        @include('layouts/admin/adminNavBar');
 
         <div class="header-advance-area">
 
@@ -117,7 +123,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
-                            <h4>Employer List</h4>
+                            <h4>Candidate Details</h4>
                             <div class="add-product">
                                 <a href="{{route('admin.show')}}">Back To Your Profile</a>
                             </div>
@@ -129,6 +135,7 @@
                                     <th>Email</th>
                                     <th>Degree</th>
                                     <th>Job title</th>
+                                    <th>Institute</th>
                                     <th>Prev_WorkPlace</th>
                                     <th>Soft Skills</th>
                                     <th> Software</th>
@@ -159,6 +166,9 @@
                                   <td>
                                       {{$viewSingleInfo->institute}}
                                   </td>
+                                  <td>
+                                      {{$viewSingleInfo->org}}
+                                  </td>
                       <td>
                         {{$viewSingleInfo->softSkills}}
                     </td>
@@ -188,7 +198,8 @@
                 </div>
             </div>
         </div>
-
+    </div>
+</div>
 
 </body>
 

@@ -25,10 +25,12 @@ class LocalAgentController extends Controller
 
     public function __construct()
     {
+        //Ensure the authentication
         $this->middleware('auth:localAgent');
     }
     public function approvedCandidates()
     {
+        //Getting all approved candidates
 
         $current_agent_id=Auth::user()->id;
         $approvedCandidates=DB::table('candidate_requests')
@@ -52,7 +54,9 @@ class LocalAgentController extends Controller
         return view('local_agent.approvedCandidates',['approvedCandidates'=>$approvedCandidates]);
     }
 
-    public function approveCandidates(Request $request,$current_candidate_id){
+    public function approveCandidates(Request $request,$current_candidate_id)
+    {
+        //To approve candidate requests
         $current_agent_id=Auth::user()->id;
 
           if(CandidateRequests::all()
@@ -79,7 +83,9 @@ class LocalAgentController extends Controller
           return back()->with('success_message','The request is approved');
 
     }
-    public function rejectCandidates(Request $request,$current_candidate_id){
+    public function rejectCandidates(Request $request,$current_candidate_id)
+    {
+        //To reject candidates
         $current_agent_id=Auth::user()->id;
 
         if(CandidateRequests::all()
@@ -102,7 +108,9 @@ class LocalAgentController extends Controller
 
     }
 
-    public function seeCandidateRequests(){
+    public function seeCandidateRequests()
+    {
+        //To demonstrate candidate requests
         $current_agent_id=Auth::user()->id;
 
         $candidates=DB::table('candidates')
@@ -125,7 +133,9 @@ class LocalAgentController extends Controller
          return view('local_agent.candidateRequestLists',['candidates'=>$candidates]);
 
      }
-    public function seeEmployers(){
+    public function seeEmployers()
+    {
+        //To demonstrate all employers
         $employer=Employer::all();
 
         if(session('success_message')){
@@ -142,7 +152,9 @@ class LocalAgentController extends Controller
         return view('local_agent.seeEmployerList')->with(['employer'=>$employer]);
 
     }
-    public function seeRequests(){
+    public function seeRequests()
+    {
+        //To demonstrate employer requests
 
           $current_agent_id=Auth::user()->id;
 
@@ -161,13 +173,11 @@ class LocalAgentController extends Controller
             return view('local_agent.requestLists',$data);
 
     }
-    public function sendRequestToEmployer(Request $request,$emp_id){
+    public function sendRequestToEmployer(Request $request,$emp_id)
+    {
 
-
-
+        //Sending request to specific employer
         $id = Auth::user()->id;
-
-
         if( AgentRequest::where('agent_reg_id', '=',$id)
             ->where('emp_id','=',$emp_id)
             ->count()>0
@@ -199,7 +209,6 @@ class LocalAgentController extends Controller
      */
     public function index()
     {
-//        return view('local_agent.local_agent_home');
         $current_agent_id=Auth::user()->id;
         $data['agents']=AgentsProfile::select('photo')->where('agent_reg_id',$current_agent_id)->get();
 
@@ -207,6 +216,7 @@ class LocalAgentController extends Controller
     }
     public function requiredTasks()
     {
+        //Getting all required tasks
 
         if(session('error_message')){
             Alert::error('Error',session('error_message'))->autoClose(3000);
@@ -239,6 +249,7 @@ class LocalAgentController extends Controller
 
     public function visa_application($candidate_name,$candidate_email,$candidate_id)
     {
+        //Application form with proper information
         if(session('success_message'))
         {
             Alert::success('Success',session('success_message'))->autoClose(3000);
@@ -311,6 +322,7 @@ class LocalAgentController extends Controller
     }
     public function regStatus()
     {
+        //To demonstrate registration status
         $current_agent_id = Auth::user()->id;
         $reg_status = DB::table('local_agents')
             ->select('reg_status')
@@ -322,6 +334,7 @@ class LocalAgentController extends Controller
 
     public function providedTasks()
     {
+
         $current_agent_id = Auth::user()->id;
         //getting provided tasks
         $provided_services = DB::table('visa_applies')
@@ -333,7 +346,6 @@ class LocalAgentController extends Controller
 
 
 
-       // dd($package_type_id);
 
     }
 }

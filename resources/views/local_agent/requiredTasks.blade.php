@@ -35,7 +35,14 @@
                      <a href="{{route('home.page')}}"><button  style="height:30px; padding-top:4px;" class="btn btn-success">Search Job</button></a>
                     @elseif($candidate_detail->service_type==='Can apply job')
                      <a href="{{route('home.page')}}"><button style="height:30px; padding-top:4px;" class="btn btn-success">Apply Job</button></a>
-
+                    @elseif($candidate_detail->service_type==='Can manage job approval')
+                        <a href="{{route('home.page')}}"><button style="height:30px; padding-top:4px;" class="btn btn-success">Job Approval</button></a>
+                    @elseif($candidate_detail->service_type==='Can communicate with employer')
+                        <a href="{{route('home.page')}}"><button style="height:30px; padding-top:4px;" class="btn btn-success">Communicate</button></a>
+                    @elseif($candidate_detail->service_type==='Can find a company')
+                        <a href="{{route('home.page')}}"><button style="height:30px; padding-top:4px;" class="btn btn-success">Find Company</button></a>
+                    @elseif($candidate_detail->service_type==='Can subscribe')
+                        <a href="{{route('home.page')}}"><button style="height:30px; padding-top:4px;" class="btn btn-success">Subscribe</button></a>
                     @endif
 
                 </td>

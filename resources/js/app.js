@@ -4,7 +4,6 @@ window.Vue = require('vue');
 import { Form, HasError, AlertError } from 'vform';
 import swal from 'sweetalert2'
 
-
 import Vue from 'vue'
 
 import VueChatScroll from 'vue-chat-scroll'
@@ -93,20 +92,10 @@ const pcoded = new Vue({
                         .catch(error=> {
                             console.log(error);
                         });
-
-
-
-
-
-
                 }
-
-
             },
-
-
-            sendUpdate(){
-
+            sendUpdate()
+            {
                 if (this.message.length != 0) {
                     this.chat.message.push(this.message);
                     this.chat.user.push('you');
@@ -122,28 +111,21 @@ const pcoded = new Vue({
                             .catch(error=> {
                                 console.log(error);
                             });
-
-
-
-
                 }
-
-
             },
 
-           getTime(){
+           getTime()
+           {
                 let time=new Date();
                 return time.getHours()+':'+time.getMinutes();
            }
+           },
 
-        },
-
-    mounted() {
-
-          Echo.channel('chat').
-             listen('ChatEvent',(e)=>{
-
-
+    mounted()
+    {
+        Echo.channel('chat').
+             listen('ChatEvent',(e)=>
+        {
                   this.chat.message.push(e.message);
                   this.chat.user.push(e.user);
                   this.chat.time.push(this.getTime());
@@ -152,7 +134,6 @@ const pcoded = new Vue({
          })
 
    }
-
 
 });
 

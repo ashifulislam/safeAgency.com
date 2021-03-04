@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Adminty - Premium Admin Template by Colorlib </title>
+    <title>Agent </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -146,40 +146,37 @@
                                     @enderror
                                 </div>
                                 <div class="row m-t-25 text-left">
-                                    <div class="col-md-12">
-                                        <div class="checkbox-fade fade-in-primary">
-                                            <label>
-                                                <input type="checkbox" value="">
-                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
-                                                <span class="text-inverse">I read and accept <a href="#">Terms &amp; Conditions.</a></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkbox-fade fade-in-primary">
-                                            <label>
-                                                <input type="checkbox" value="">
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="checkbox-fade fade-in-primary">--}}
+{{--                                            <label>--}}
+{{--                                                <input type="checkbox" value="">--}}
+{{--                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>--}}
+{{--                                                <span class="text-inverse">I read and accept <a href="#">Terms &amp; Conditions.</a></span>--}}
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="checkbox-fade fade-in-primary">--}}
+{{--                                            <label>--}}
+{{--                                                <input type="checkbox" value="">--}}
 {{--                                                <span class="cr">--}}
 {{--                                                    <i class="cr-icon icofont icofont-ui-check txt-primary"></i>--}}
 {{--                                                </span>--}}
 {{--                                                <span class="text-inverse">Send me the <a href="#!">Newsletter</a> weekly.</span>--}}
-                                            </label>
-                                        </div>
-                                    </div>
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
                                         <input type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" value="Sign Up Now"/>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                        <p class="text-inverse text-left"><a href="index-1.htm"><b class="f-w-600">Back to website</b></a></p>
-                                    </div>
 
-                                </div>
+                                Already Registered? <a href="{{route('localAgent.login')}}" class="btn btn-primary">LOGIN</a>
+
+
+                                <hr>
                             </div>
                         </div>
                     </form>
@@ -195,7 +192,7 @@
 
 
 <div class="footer bg-inverse">
-    <p class="text-center">Copyright &copy; 2017 FLAT UI ADMIN , All rights reserved.</p>
+    <p class="text-center">Copyright &copy;Daffodil International University , All rights reserved.</p>
 </div>
 <!-- Warning Section Starts -->
 <!-- Older IE warning message -->

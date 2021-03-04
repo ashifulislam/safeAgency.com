@@ -59,12 +59,14 @@ class LoginController extends Controller
             'password'=>$request->password,
         ];
         // dd($credentials);
-        if(Auth::guard('candidate')->attempt($credentials,$request->remember)){
+        if(Auth::guard('candidate')->attempt($credentials,$request->remember))
+        {
             return redirect()->intended(route('candidate.home'));
         }
         return $this->sendFailedLoginResponse($request);
     }
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::guard('candidate')->logout();
         return redirect('/homePage');
     }
