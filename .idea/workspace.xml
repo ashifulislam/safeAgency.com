@@ -20,107 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c120066e-fdbb-443e-aa21-69cba5bd5f0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/chakuri3.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chakuri3.com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Employer/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Employer/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocalAgentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SslCommerzPaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/AddCandidateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/AddCandidateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/candidate/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/candidate/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607346870.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607357182.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607357327.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607357345.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607520837.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607618353.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607618378.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700092.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700465.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700603.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700605.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700611.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700612.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700635.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607700650.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1607779703.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608270645.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608376721.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608376898.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608376960.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608377179.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608381506.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608381556.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608381762.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608441388.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608565618.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608565711.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608615801.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608615818.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608615911.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608625768.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608625876.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608643797.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608643878.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608729795.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608729956.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1608740330.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1609148551.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1609148556.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1610103528.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1610103761.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1610103888.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile/1611597511.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/logIn.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/logIn.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/viewSingleInfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/viewSingleInfo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_login_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_login_update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/authOfLocalAgent/local_agent_register_update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/applyConfirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/applyConfirmation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidateHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidateHome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/candidateProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/candidateProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/exampleEasycheckout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/exampleEasycheckout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/exampleHosted.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/exampleHosted.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/jobApplicationForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/jobApplicationForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/packageList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/partialPackageList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/searchresult.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/searchresult.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/searchresultByKeyword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/searchresultByKeyword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/singleJob.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/singleJob.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/candidate/updateCandidateProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/candidate/updateCandidateProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/employerProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/employerProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/pendingAgentRequest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/pendingAgentRequest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/pendingJobApplication.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/pendingJobApplication.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/updateEmployerProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/updateEmployerProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employer/viewSingleInfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employer/viewSingleInfo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/adminSideBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateNavBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateNavBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/candidateSideBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/candidate/customer_view_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/local_agent/local_agent_master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/employerNavBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/employerNavBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/employerSideBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/employerSideBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/approvedCandidates.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/approvedCandidates.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/candidateRequestLists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/candidateRequestLists.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/requestLists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/requestLists.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/requiredTasks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/local_agent/seeEmployerList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/local_agent/seeEmployerList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2021-01-02.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2021-01-03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2021-01-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,6 +348,7 @@
       <workItem from="1614743081892" duration="1526000" />
       <workItem from="1614746620955" duration="365000" />
       <workItem from="1614871077883" duration="1360000" />
+      <workItem from="1614873137130" duration="722000" />
     </task>
     <servers />
   </component>
@@ -466,10 +368,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610989077091">
+    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614873674056">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1610989077091" />
+    <state x="447" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1614873674056" />
     <state x="428" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608614287844">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
