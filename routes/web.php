@@ -140,7 +140,7 @@ Route::get('seeRequests','LocalAgentController@seeRequests')->name('seeRequests'
 //Route::get('chatView','EmployerController@chat')->name('chatView');
 
 Route::get('chatView','CandidateController@chat')->name('chatView');
-Route::post('send','localAgent\ChatController@send');
+Route::post('send','LocalAgent\ChatController@send');
 
 //Route::post('sendToEmployer','EmployerController@send');
 Route::post('sendToCandidate','CandidateController@send');
@@ -157,9 +157,9 @@ Route::get('packageList/{agent_id}', 'CandidateController@showPackageList')->nam
 
 Route::get('partialPackage/{agent_id}', 'CandidateController@showPartialPackageList')->name('showPartialPackage');
 
-Route::resource('serviceTypes','localAgent\ServiceTypeController');
+Route::resource('serviceTypes','LocalAgent\ServiceTypeController');
 
-Route::resource('postService','localAgent\ServicePostController');
+Route::resource('postService','LocalAgent\ServicePostController');
 
 Route::get('seeAgentRequestsStatus','candidate\CandidateRequestsController@seeRequests')->name('agentRequestsStatus');
 
@@ -175,8 +175,8 @@ Route::get('requiredTasks','LocalAgentController@requiredTasks')->name('required
 //Route::get('chatWithCandidate','localAgent\ChatController@chatWithCandidate')->name('chatWithCandidate');
 Route::get('visa_application/{candidate_name}/{candidate_email}/{candidate_id}','localAgentController@visa_application')->name('visa_application');
 
-Route::resource('packageType','localAgent\PackageTypeController');
-Route::resource('visaApplication','localAgent\VisaApplicationController');
+Route::resource('packageType','LocalAgent\PackageTypeController');
+Route::resource('visaApplication','LocalAgent\VisaApplicationController');
 
 Route::get('service_detail','CandidateController@service_detail')->name('service_details');
 Route::get('print_visa','CandidateController@print_visa')->name('print_visa');
