@@ -48,7 +48,7 @@ class LocalAgentLoginController extends Controller
     }
     public function showLoginForm()
     {
-        return view('Auth.authOfLocalAgent.local_agent_login_update');
+        return view('auth.authOfLocalAgent.local_agent_login_update');
     }
     public function login(Request $request)
     {
