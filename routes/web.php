@@ -131,7 +131,7 @@ Route::resource('agents','NOAPI\AgentsController');
 
 
 
-Route::get('chat','localAgent\ChatController@chat')->name('chat');
+Route::get('chat','LocalAgent\ChatController@chat')->name('chat');
 
 Route::get('seeEmployers','LocalAgentController@seeEmployers')->name('seeEmployers');
 
