@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\localAgent;
+namespace App\Http\Controllers\LocalAgent;
 
 use App\Http\Controllers\Controller;
 use App\Local_agent;
