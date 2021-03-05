@@ -10,16 +10,16 @@
     <title>SafeAgency.com</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('user')}}/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{secure_asset('user')}}/images/logo/favicon.png" type="image/x-icon">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="{{asset('user')}}/css/animate-3.7.0.css">
-    <link rel="stylesheet" href="{{asset('employer')}}/css/font-awesome-4.7.0.min.css">
-    <link rel="stylesheet" href="{{asset('user')}}/fonts/flat-icon/flaticon.css">
-    <link rel="stylesheet" href="{{asset('user')}}/css/bootstrap-4.1.3.min.css">
-    <link rel="stylesheet" href="{{asset('user')}}/css/owl-carousel.min.css">
-    <link rel="stylesheet" href="{{asset('user')}}/css/nice-select.css">
-    <link rel="stylesheet" href="{{asset('user')}}/css/style.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="{{secure_asset('employer')}}/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/fonts/flat-icon/flaticon.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/css/nice-select.css">
+    <link rel="stylesheet" href="{{secure_asset('user')}}/css/style.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -112,7 +112,7 @@
                 @foreach($agent_profiles as $agent)
                 <div class="col-lg-4">
                     <div class="single-feature mb-4 mb-lg-0">
-                        <img height="250px" width="100%"  class="img"  src="{{asset('/img/profile/'.$agent->photo)}}" alt="not found">
+                        <img height="250px" width="100%"  class="img"  src="{{secure_asset('/img/profile/'.$agent->photo)}}" alt="not found">
                         <h4>{{$agent->skill}}</h4>
 
                         <p class="py-3">{{$agent->bio}}</p>
