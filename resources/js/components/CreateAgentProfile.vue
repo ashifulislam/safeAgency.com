@@ -905,7 +905,7 @@ export default {
                 type: '',
                 bio: '',
                 about:'',
-                photo: ''
+
             })
         }
     },
@@ -974,14 +974,26 @@ export default {
                     swal.fire({
                         type: 'error',
                         title: 'Oops...',
+                        text: 'You have to choose a file',
+                    })
+                }
+                else if(response.status===202)
+                {
+                    swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
                         text: 'Profile already exists',
                     })
                 }
-                else{
+                else
+                {
+                    //sweet alert handling
                     toast.fire({
                         icon: 'success',
-                        title: 'Signed in successfully'
+                        title: 'Profile created successfully'
                     })
+                    //the event is initialized after creating the user
+                    Fire.$emit('afterCreate');
 
                 }
 

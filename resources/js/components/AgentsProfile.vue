@@ -986,7 +986,7 @@ export default {
                 interest: '',
                 bio: '',
                 about:'',
-                photo: ''
+
             })
         }
     },
@@ -1019,18 +1019,30 @@ export default {
         updateUser(id){
             // console.log('editing data');
             this.form.put('agents/'+this.form.agent_reg_id)
-                .then(()=>{
+                .then(response=>{
 
                     //success message
                     $('#addNew').modal('hide');
+                    if(response.status===200)
+                    {
+                        swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'You have to choose a file',
+                        })
+                    }
+                    else
+                        {
+                        swal.fire(
+                            'updated!',
+                            'Your file has been updated.',
+                            'success'
+                        )
+                        //Here the event is created
+                        Fire.$emit('afterCreate');
+                    }
 
-                    swal.fire(
-                        'updated!',
-                        'Your file has been updated.',
-                        'success'
-                    )
-                    //Here the event is created
-                    Fire.$emit('afterCreate');
+
                 }).catch(()=>{
 
             })
@@ -1065,16 +1077,36 @@ export default {
         createUser(){
             //made post request
             this.form.post('agents').then(()=>{
-                //the event is initialized after creating the user
-                Fire.$emit('afterCreate');
 
                 //hide the modal window
                 $('#addNew').modal('hide')
-                //sweet alert handling
-                toast.fire({
-                    icon: 'success',
-                    title: 'Profile created successfully'
-                })
+                if(response.status===200){
+                    swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'You have to choose a file',
+                    })
+                }
+                else if(response.status===202)
+                {
+                    swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Profile already exists',
+                    })
+                }
+                else
+                    {
+                    //sweet alert handling
+                    toast.fire({
+                        icon: 'success',
+                        title: 'Profile created successfully'
+                    })
+                        //the event is initialized after creating the user
+                        Fire.$emit('afterCreate');
+
+                    }
+
             }).catch(()=>{
 
             })
@@ -1092,21 +1124,24 @@ export default {
                 cancelButtonText:'cancel',
 
             }).then((result) => {
-                //Send request to the server
-                this.form.delete('agents/'+id).then(()=>{
-                    if (result.isConfirmed) {
-                        swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        )
+                if (result.isConfirmed){
+                    //Send request to the server
+                    this.form.delete('agents/'+id).then(()=>{
+                        if (result.isConfirmed)
+                            swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
                         //Here the event is created
                         Fire.$emit('afterCreate');
 
-                    }
-                }).catch(()=>{
-                    swal("Failed","There was something mistakes")
-                });
+
+                    }).catch(()=>{
+                        swal("Failed","There was something mistakes")
+                    });
+
+                }
 
             })
         },

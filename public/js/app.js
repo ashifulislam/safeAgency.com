@@ -2894,8 +2894,7 @@ __webpack_require__.r(__webpack_exports__);
         skill: '',
         interest: '',
         bio: '',
-        about: '',
-        photo: ''
+        about: ''
       })
     };
   },
@@ -2926,12 +2925,21 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateUser: function updateUser(id) {
       // console.log('editing data');
-      this.form.put('agents/' + this.form.agent_reg_id).then(function () {
+      this.form.put('agents/' + this.form.agent_reg_id).then(function (response) {
         //success message
         $('#addNew').modal('hide');
-        swal.fire('updated!', 'Your file has been updated.', 'success'); //Here the event is created
 
-        Fire.$emit('afterCreate');
+        if (response.status === 200) {
+          swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'You have to choose a file'
+          });
+        } else {
+          swal.fire('updated!', 'Your file has been updated.', 'success'); //Here the event is created
+
+          Fire.$emit('afterCreate');
+        }
       })["catch"](function () {});
     },
     editModal: function editModal(user) {
@@ -2959,15 +2967,30 @@ __webpack_require__.r(__webpack_exports__);
     createUser: function createUser() {
       //made post request
       this.form.post('agents').then(function () {
-        //the event is initialized after creating the user
-        Fire.$emit('afterCreate'); //hide the modal window
+        //hide the modal window
+        $('#addNew').modal('hide');
 
-        $('#addNew').modal('hide'); //sweet alert handling
+        if (response.status === 200) {
+          swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'You have to choose a file'
+          });
+        } else if (response.status === 202) {
+          swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Profile already exists'
+          });
+        } else {
+          //sweet alert handling
+          toast.fire({
+            icon: 'success',
+            title: 'Profile created successfully'
+          }); //the event is initialized after creating the user
 
-        toast.fire({
-          icon: 'success',
-          title: 'Profile created successfully'
-        });
+          Fire.$emit('afterCreate');
+        }
       })["catch"](function () {});
     },
     deleteUsers: function deleteUsers(id) {
@@ -2983,16 +3006,16 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'cancel'
       }).then(function (result) {
-        //Send request to the server
-        _this3.form["delete"]('agents/' + id).then(function () {
-          if (result.isConfirmed) {
-            swal.fire('Deleted!', 'Your file has been deleted.', 'success'); //Here the event is created
+        if (result.isConfirmed) {
+          //Send request to the server
+          _this3.form["delete"]('agents/' + id).then(function () {
+            if (result.isConfirmed) swal.fire('Deleted!', 'Your file has been deleted.', 'success'); //Here the event is created
 
             Fire.$emit('afterCreate');
-          }
-        })["catch"](function () {
-          swal("Failed", "There was something mistakes");
-        });
+          })["catch"](function () {
+            swal("Failed", "There was something mistakes");
+          });
+        }
       });
     }
   },
@@ -3923,8 +3946,7 @@ __webpack_require__.r(__webpack_exports__);
         interest: '',
         type: '',
         bio: '',
-        about: '',
-        photo: ''
+        about: ''
       })
     };
   },
@@ -3988,13 +4010,22 @@ __webpack_require__.r(__webpack_exports__);
           swal.fire({
             type: 'error',
             title: 'Oops...',
+            text: 'You have to choose a file'
+          });
+        } else if (response.status === 202) {
+          swal.fire({
+            type: 'error',
+            title: 'Oops...',
             text: 'Profile already exists'
           });
         } else {
+          //sweet alert handling
           toast.fire({
             icon: 'success',
-            title: 'Signed in successfully'
-          });
+            title: 'Profile created successfully'
+          }); //the event is initialized after creating the user
+
+          Fire.$emit('afterCreate');
         }
       })["catch"](function () {});
     },

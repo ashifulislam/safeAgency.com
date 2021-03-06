@@ -112,7 +112,7 @@
                 @foreach($agent_profiles as $agent)
                 <div class="col-lg-4">
                     <div class="single-feature mb-4 mb-lg-0">
-                        <img height="250px" width="100%"  class="img"  src="{{secure_asset('/img/profile/'.$agent->photo)}}" alt="not found">
+                        <img height="250px" width="100%"  class="img"  src="{{asset('/img/profile/'.$agent->photo)}}" alt="not found">
                         <h4>{{$agent->skill}}</h4>
 
                         <p class="py-3">{{$agent->bio}}</p>

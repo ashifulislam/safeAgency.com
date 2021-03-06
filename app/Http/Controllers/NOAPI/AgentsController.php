@@ -39,48 +39,49 @@ class AgentsController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $user= Auth::user();
-        //Get the current photo from the database
-        $currentPhoto=$user->photo;
 
-        if($request->photo != $currentPhoto){
+
+
+        if($request->photo)
+        {
+            $profile = AgentsProfile::where('agent_reg_id',$id)->first();
+
+            $image_path = "img/profile/".$profile->photo;
+            if(file_exists($image_path))
+            {
+                @unlink($image_path);
+            }
+            //To convert string to image
             $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
             \Image::make($request->photo)->save(public_path('img/profile/').$name);
-            $request->merge(['photo'=>$name]);
 
-            $userPhoto=public_path('img/profile/').$currentPhoto;
-            if(file_exists($userPhoto)){
-                @unlink($userPhoto);
+            $agent = LocalAgent::findOrFail($id);
+            $agent = LocalAgent::where('id',$id)->first();
+            $agent->name = $request->input('name');
+            $agent->email = $request->input('email');
+
+
+
+            $this->validate($request,[
+                'name' => 'required|string|max:191',
+                'email' => 'required|string|email|max:191|unique:users,email,'.$agent->id,
+                'age' => 'required|integer|max:191',
+                'skill' => 'required|string|max:190',
+                'interest' => 'required|string|max:69',
+                'about' => 'required|string|max:10000',
+            ]);
+            if($agent->save())
+            {
+                AgentsProfile::where('agent_reg_id',$id)->update(array('bio'=>$request['bio'],'skill'=>$request['skill'],'interest'=>$request['interest'],'about'=>$request['about'],'photo'=>$name));
+                return response()->json(['success'=>'everything is ok'],201);
+
             }
+        }
+        else
+            {
+            return response()->json(['error'=>'you have to choose your file'],200);
 
         }
-
-        $agent = LocalAgent::findOrFail($id);
-        $agent = LocalAgent::where('id',$id)->first();
-        $agent->name = $request->input('name');
-        $agent->email = $request->input('email');
-        $this->validate($request,[
-            'name' => 'required|string|max:191',
-            'email' => 'required|string|email|max:191|unique:users,email,'.$agent->id,
-            'age' => 'required|integer|max:191',
-            'skill' => 'required|string|max:190',
-            'interest' => 'required|string|max:69',
-            'about' => 'required|string|max:10000',
-
-
-        ]);
-        if($agent->save()){
-            // $profile = Customer::findOrFail($id);
-            $profile = AgentsProfile::where('agent_reg_id',$id)->first();
-            $profile->bio = $request->input('bio');
-            $profile->skill= $request->input('skill');
-            $profile->interest = $request->input('interest');
-            $profile->about = $request->input('about');
-            $profile->photo=$request->input('photo');
-            $profile->save();
-        }
-
-
 
     }
 
@@ -93,51 +94,47 @@ class AgentsController extends Controller
     public function store(Request $request)
     {
 
-          $user= Auth::user();
-
-
-
         $this->validate($request,[
             'age' => 'required|string|max:191',
             'skill' => 'required|string|max:190',
             'interest' => 'required|string|max:69',
             'about' => 'required|string|max:1000'
         ]);
-        $currentPhoto=$user->photo;
-        if($request->photo != $currentPhoto){
+        if($request->photo)
+        {
             $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
             \Image::make($request->photo)->save(public_path('img/profile/').$name);
             $request->merge(['photo'=>$name]);
+            $id = Auth::user()->id;
+            $customer_existence=AgentsProfile::where('agent_reg_id','=',$id)->first();
+            if($customer_existence==null)
+            {
 
-            $userPhoto=public_path('img/profile/').$currentPhoto;
-            if(file_exists($userPhoto)){
-                @unlink($userPhoto);
+
+                return AgentsProfile::create([
+                    'age' => $request['age'],
+                    'skill' => $request['skill'],
+                    'interest' => $request['interest'],
+                    'bio' => $request['bio'],
+                    'about'=>$request['about'],
+
+                    'photo' => $request['photo'],
+                    'agent_reg_id' => $id,
+
+                ]);
+                return response()->json(['success'=>'everything is ok'],201);
+
+
+            }
+            else{
+                return response()->json(['error'=>'profile already exists'],202);
+
             }
         }
-        $id = Auth::user()->id;
 
-
-        $customer_existence=AgentsProfile::where('agent_reg_id','=',$id)->first();
-
-        if($customer_existence==null){
-
-
-            return AgentsProfile::create([
-                'age' => $request['age'],
-                'skill' => $request['skill'],
-                'interest' => $request['interest'],
-                'bio' => $request['bio'],
-                'about'=>$request['about'],
-
-                'photo' => $request['photo'],
-                'agent_reg_id' => $id,
-
-            ]);
-
-        }
         else{
 
-            return response()->json(['error'=>'resource not found'],200);
+            return response()->json(['error'=>'you have to choose your file'],200);
 
         }
 
@@ -173,8 +170,14 @@ class AgentsController extends Controller
 
         $profile = AgentsProfile::where('agent_reg_id',$id)->first();
 
+        $image_path = "img/profile/".$profile->photo;
+        if(file_exists($image_path))
+        {
+            @unlink($image_path);
+        }
         //delete the user
-        if($profile->delete()){
+        if($profile->delete())
+        {
             return  DB::table('local_agents')
                 ->where('id', $id)
                 ->update([
